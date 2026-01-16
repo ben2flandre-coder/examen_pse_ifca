@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXAMEN PSE - Prévention des risques professionnels IFCA/PAC | GRETA du Var / GIP FIPAN</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Marianne:wght@400;500;700;800&display=swap');
+    
+    :root {
+      --gip-blue: #0066cc;
+      --gip-blue-dark: #0b5394;
+      --greta-green: #009b3a;
+      --slate-dark: #0f172a;
+      --slate: #475569;
+      --slate-light: #cbd5e1;
+      --bg-light: #f8fafc;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Marianne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--slate-dark);
+      background-color: var(--bg-light);
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: white;
+      padding: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Bannière avec logos */
+    .header-banner {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 5px solid var(--gip-blue);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .logo-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .logo-left img {
+      height: 70px;
+      width: auto;
+    }
+    
+    .logo-right img {
+      height: 60px;
+      width: auto;
+    }
+    
+    /* Titre de l'examen */
+    .exam-title-section {
+      text-align: center;
+      padding: 25px 40px;
+      background: var(--gip-blue);
+      color: white;
+    }
+    
+    .exam-title-section h1 {
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    
+    .exam-title-section .subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      opacity: 0.95;
+      margin-bottom: 5px;
+    }
+    
+    .exam-title-section .details {
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    /* Cartouche d'identification */
+    .identity-cartouche {
+      background: var(--bg-light);
+      border: 3px solid var(--gip-blue);
+      margin: 30px 40px;
+      padding: 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .cartouche-header {
+      background: var(--gip-blue);
+      color: white;
+      padding: 10px 20px;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .cartouche-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: white;
+    }
+    
+    .cartouche-field {
+      padding: 15px 20px;
+      border-right: 1px solid var(--slate-light);
+      border-bottom: 1px solid var(--slate-light);
+    }
+    
+    .cartouche-field:nth-child(2n) {
+      border-right: none;
+    }
+    
+    .cartouche-field:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+    
+    .cartouche-field label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--gip-blue);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    
+    .cartouche-field input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid var(--slate-dark);
+      padding: 5px 0;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Marianne', sans-serif;
+      background: transparent;
+    }
+    
+    .cartouche-field input:focus {
+      outline: none;
+      border-bottom-color: var(--gip-blue);
+    }
+    
+    /* Corps du document */
+    .document-body {
+      padding: 30px 40px;
+    }
+    
+    /* Consignes */
+    .instructions {
+      background: #fffbeb;
+      border: 2px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .instructions h2 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #b45309;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .instructions ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .instructions li {
+      font-size: 13px;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+      color: var(--slate-dark);
+      font-weight: 500;
+    }
+    
+    .instructions li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #f59e0b;
+      font-weight: 800;
+    }
+    
+    /* Sections de questions */
+    .section {
+      margin-bottom: 40px;
+      page-break-inside: avoid;
+    }
+    
+    .section-header {
+      background: linear-gradient(135deg, var(--gip-blue) 0%, var(--gip-blue-dark) 100%);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    
+    .section-header h2 {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .section-header .points {
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-top: 3px;
+    }
+    
+    /* Questions */
+    .question {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border: 2px solid var(--slate-light);
+      border-radius: 8px;
+      page-break-inside: avoid;
+    }
+    
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 15px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--slate-light);
+    }
+    
+    .question-number {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gip-blue);
+    }
+    
+    .question-points {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      background: var(--bg-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    
+    /* Contexte professionnel */
+    .context-box {
+      background: #f0f9ff;
+      border-left: 4px solid #0284c7;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+    
+    .context-box .context-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    
+    .context-box .context-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--slate-dark);
+      line-height: 1.6;
+    }
+    
+    .question-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate-dark);
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    /* Choix multiples */
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .choice {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--slate-light);
+      border-radius: 6px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    
+    .choice:hover {
+      background: var(--bg-light);
+      border-color: var(--gip-blue);
+    }
+    
+    .choice-box {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--slate);
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.2s;
+    }
+    
+    .choice-box.checked {
+      background: var(--gip-blue);
+      border-color: var(--gip-blue);
+      position: relative;
+    }
+    
+    .choice-box.checked::after {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    
+    .choice-text {
+      font-size: 13px;
+      color: var(--slate-dark);
+      font-weight: 500;
+    }
+    
+    /* Zone de réponse libre */
+    .answer-area {
+      margin-top: 15px;
+    }
+    
+    .answer-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .answer-line {
+      border-bottom: 1px solid var(--slate-light);
+      min-height: 30px;
+      padding: 5px 0;
+      font-size: 13px;
+    }
+    
+    .answer-line[contenteditable="true"]:focus {
+      outline: none;
+      border-bottom-color: var(--gip-blue);
+      background: #f0f9ff;
+    }
+    
+    /* Tableau */
+    .table-container {
+      overflow-x: auto;
+      margin-top: 15px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    
+    th {
+      background: var(--gip-blue);
+      color: white;
+      padding: 10px;
+      text-align: left;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.3px;
+    }
+    
+    td {
+      padding: 12px 10px;
+      border: 1px solid var(--slate-light);
+      font-weight: 500;
+    }
+    
+    td[contenteditable="true"]:focus {
+      outline: 2px solid var(--gip-blue);
+      background: #f0f9ff;
+    }
+    
+    tbody tr:nth-child(even) {
+      background: var(--bg-light);
+    }
+    
+    /* Notes importantes */
+    .important-note {
+      background: #fee2e2;
+      border-left: 4px solid #dc2626;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .important-note strong {
+      color: #dc2626;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    
+    .important-note p {
+      font-size: 13px;
+      margin-top: 5px;
+      color: var(--slate-dark);
+      font-weight: 500;
+    }
+    
+    /* Zone de signature */
+    .signature-section {
+      margin-top: 50px;
+      padding: 25px;
+      background: var(--bg-light);
+      border: 2px solid var(--slate-light);
+      border-radius: 8px;
+    }
+    
+    .signature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+    
+    .signature-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .signature-field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .signature-field label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--slate);
+      letter-spacing: 0.3px;
+    }
+    
+    .signature-field .value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate-dark);
+      padding: 8px 0;
+      border-bottom: 2px solid var(--slate-light);
+    }
+    
+    .signature-box-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .signature-box-container label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--slate);
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+    
+    .signature-canvas-wrapper {
+      border: 2px solid var(--gip-blue);
+      border-radius: 8px;
+      background: white;
+      padding: 10px;
+    }
+    
+    #signatureCanvas {
+      border: 1px dashed var(--slate-light);
+      border-radius: 4px;
+      cursor: crosshair;
+      touch-action: none;
+      display: block;
+      width: 100%;
+    }
+    
+    .signature-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    
+    .signature-buttons button {
+      padding: 8px 16px;
+      border: 1px solid var(--slate-light);
+      background: white;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Marianne', sans-serif;
+    }
+    
+    .signature-buttons button:hover {
+      background: var(--bg-light);
+      border-color: var(--gip-blue);
+    }
+    
+    .signature-buttons button.clear {
+      color: #dc2626;
+      border-color: #dc2626;
+    }
+    
+    .signature-buttons button.clear:hover {
+      background: #fee2e2;
+    }
+    
+    /* Email button */
+    .submit-section {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 40px 0;
+      border: 2px dashed var(--gip-blue);
+    }
+    
+    .submit-section h3 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--slate-dark);
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    
+    .email-button {
+      background: var(--gip-blue);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-family: 'Marianne', sans-serif;
+    }
+    
+    .email-button:hover {
+      background: var(--gip-blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+    }
+    
+    .submit-info {
+      font-size: 12px;
+      color: var(--slate);
+      margin-top: 12px;
+      font-weight: 500;
+    }
+    
+    /* Footer */
+    .footer {
+      margin-top: 30px;
+      padding: 20px 40px;
+      border-top: 2px solid var(--slate-light);
+      text-align: center;
+      font-size: 11px;
+      color: var(--slate);
+      background: var(--bg-light);
+    }
+    
+    .footer strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: var(--slate-dark);
+    }
+    
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      
+      .container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+      
+      .submit-section {
+        display: none;
+      }
+      
+      .signature-buttons {
+        display: none;
+      }
+      
+      .section, .question {
+        page-break-inside: avoid;
+      }
+      
+      .header-banner {
+        background: white !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .logo-left, .logo-right {
+        justify-content: center;
+      }
+      
+      .cartouche-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cartouche-field {
+        border-right: none !important;
+      }
+      
+      .signature-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .exam-title-section h1 {
+        font-size: 18px;
+      }
+      
+      .document-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Bannière avec logos -->
+    <div class="header-banner">
+      <div class="logo-left">
+        <img src="data:image/png;base64,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" alt="République Française - GRETA GIP FIPAN" />
+      </div>
+      <div class="logo-right">
+        <img src="data:image/png;base64,UklGRppgAABXRUJQVlA4WAoAAAAwAAAAzwcAlwIASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZBTFBImE0AAAEkBm0bSUrT8ie99zKIiAkgGMj3zJ9BTsEkJITHAoIqL70CORXVK7kPKngf6LZ1my1QRUHy3Fzi2vzarY+/aNf86bb2D2u1tgWSJL0SkIAEJCAhJCAhJOAgJCAhJCABCUj4JHw/erqSePkga3JqtyJiAhS2bdv8/3tWJyNiArzVtpXX1rZtXQISkIAEJCABCUjAQSQgIRKQgAQkDAn9x8qcjED2vs4je1GuiJgAb7VtZbJtbVuXgAQkIAEJIQEJSMBBSEBCSEACEpAwJPQfMQaQedbaea4Pyo6ICfBW21ZeW9u2dQlIQAISkBAJSIgEHEQCEiIBCUhAwpDQfjAga+9jHed53/fznKVExATg1//8/+t//v/1P/9f06PuppSDyVf+qfP/TKoJ7KFvzUrAjFG2ZcVjUlP2ZC1g4rIjKw5T1/1YxeR2O9bdbOi7sYDZLTdjGdPHzVjH/HUzliby0VuYcHIv1jGzLfxD/08jSVMB9tyNScD0QbZiEmCgk42YBJjoZB+WYGSQXViFnVlM3ICJN4QJ6PuvDGP3X90ZU7j9SjDVNG6/Kmyt3H8FY879V4Gxfv8VrEHbfXWYe+y+Lnvc7ivbg76dK9u5sPmqBkH2Xt2ic++lzqC0+YoG+c1XNgibr9uitvfqpjh7Ufde6oww8WwkW4nAsfmKJviTXzrkzVc2wNaagwdc7CTt9us2IBhcOyEPoG6+ugGfk5AHgL750mCFaSR5AuDu6zQiNpI87A4sm+A8fx742XdflwVeeFku8u6rWwB7VCGZL4xsvvSwAIDvnxB3X2KCSVnIcIW6+aJ/AljvvcFHJxur2Wrtf+x8hNG4rZpFKvGef4rpeXBuqqqkxl8Zn8fKjmokKQ7+ePtB9ziIG6oWpMtw+1vXp/cfkPZDzOPg3E7dkgqrlaDjq9xH/YZykGR9HiObqSKpsLYgN92t96fknAXAp/MDSxCS/nFQtlKWJEXWKknX07F2BZ0fF40HTKo1PE/YSVmSpHe5FUszek36bo5amfHcaSNlSZIyQAsvb0n6eeOey/WN1KV1LK8xeu+91TuHH3lslxv/iLucorUB2H1xOt87/UsE/in3OHZJyukFsBTH0Wrt+jc4d1KWpNCorElXfecHYFYzZJp/mLSRGlHKk3csVe79CSQNBCEe1sguyqqkynZqG5/5hWzmk4mNrE+DYxeVpPCyLzspP+MLm/th08mfaVPWpDQ4HLXWy5MUymtHZKudn+3TRO6hLCoZx7NmfbyanXx94Fld5SaqKhnnt36y9B/p7llM2kTNUIzzmfNPSKl9Oz2etuyhrsJ3yz8ipTrQLR7XbqHeZN8s6ceTfOXxvGkHZdn4XvTztn5zBvM4mTuoanxv+vHr5LeSLZ42cwfVje+3fjZczfi2Z4PnrTuoOflu8Sdy7ZyfCd+a54g7qJ8cUW5MTr5LG3yv/puSnwNbqhYk6WoTKLkZP9ojvi20W7MiSWXyRyXiW1N54DndhqpI8ZkczxpuO5Js8K1rbOZB8n7qVnj4eF+1Dk5Pi6+TsBk8aN9OWbwmfzjha1fJw+Czy9nN4/JZjxz8QOF26u786WDtF7aQEvDZVVKKncQ1fm5nDv4iNO6n/sLRwodQSBaLz1HIXhvmdMLRXmsV/lm3QRmA8zFXIdk9PvqU+bNgTif8C9wGdX6UMzl8dJXXEXNa4UYMstcjeYNvMz9GTNq4D+u1eAzbxo8Rk2ZuukbvfRzZc+lHk/BjxKRGtly9Jkm6bTeLftKks/NzxKyZ+612yc2DrdWo79Yfwm8jppXt1ohyw8PWWqthE0OunZoJ00butnqQmyf7941aw/0a2gXznrutJjc8nD5aY+MPFkwsm61Zl1ANoF1eKkVKxh88MbHlZgtJ6TXWFofTCknF+IPNzOR3W00q+O3BHyOFzp+sBjPn3VZU4XtTGvzJjLl3W/c9+UFdxh+sDjuzt/GTd+EP9oDp02aLnxyFn+8RC/q91s++/HiPWNLsv368R6ya92Q1YmET23aseqxuU9uJFYtHdIdswprFc8a6AWtRz+rK5mtk/b627IhCXWXV7+zO+oeOG5Nf///6/9f/v/7/9f+v/3/9/+t//uf/X//z/6//+f/X///nsxMOt72bFw43s3VzjcNisHW/dVgctu6XviwOW/ekL4vD1j3oy+Kwdffykjhs3V3TV8Vh737rywF790tfjti7J305Yu8e9OWIvXuQlyL27q7pqxGb96qvRmzej/rqgf/3/6///39KH3KuH3OO3vwzEWLOtTb9aq+15BTdv34+nvmuVb8qtd75jP7zxaWzU7Gfyf3rEM/S9Emp+XD/0oVUqj4p9Urervg0n4v8VsX52x2Hi687ghBfDmNcfJbMxdcdW4gvB7JQOm+UEuaKrzuCEF8OY1zkt6+XkKtytutw/7L58xal7CU5m/T5Ws7IFJU/q1RO2O4cH4v6eiSo+nIdE/XpWs5AE/X1yFb15cpkj87b5bAT6euRoOrLdUxU/vxfk4sGT3UUUeo7OTPihN6eEKf0Brg4oVtRuLpSt9Ov6E+5k9uOf6yn35Q/pRzb409OWv1/ElXfxMgS1eB5QhGd8E5G6Jy93jlFO6rO2uudU5wo6pytlnyEZfjcdcKW3JL+LGFHVPWO26KqPbudcZUTV//PgEtdZ5XLL+uvvZxhaX9t5Qwr+Wu9DmffUXXaEhelWsOWqNa4L6qS3a6YwsmL+SfAZ9GpS1zbn1IOt7o/ezncYv5sV7DMnV2nrmlRqpfbEtXb7Ytqj3sShNNLev/5ovPXuLo/72N9f97HclS1X8Eol0Wn72lR2sOeqBwbo3ptiDm5ZDXvPnepjdWvT1Wy3wDVnv1yVLUli05RE3tck2raE9W8M1rdbrjORcV98p2iZha3PlUtfgNUtfj1qPbsjDm6mln9mjRtipad0eb2IgrXTR97samlcu6AanE7oFrcelQlWeKrmprdkjRtipad0bIViUtfn3nuUmur3wGVvAUq54JUWzTjFDW2xyXpsSmadkbzRhQuXj7xYld75dwB1RZ2QLWFBalezgRf1eDLrUj8pmjYGQ3bULh8ed9ltfl2O6B6boHKuSLtwYAkanILC9K6K21r6i5kPmB52bmqVkvYAi1uB1SLW5Bqmq6o1ZIWpMem6LkzGvcg8hHjqy6IGp62QJvbAm1uRXrN5ZoaXhbUd0W2pm6B4921lpyPWu+if9Eltb1sgTa/BdrcirTMFERNr86Umr88qmjpwVTy05Gj5i+XKqM0Lazkv9Y+Sv0GGLmjl2jxpQ1Hv0Ps30DJT8fPkKzWF7cDKm4LtLkVaZnnEDW+eUsyvneH6NxMETMOyHg1XDKmLSziiz7LmHMDKvWLh6Ireqx/AxFv/7dYUfub2wFtbgu0uRVpmSWp/RLMAsypom51gLuHqN8CwN1D6voS1YuFssmixfSOK7rC5nZA2x5oW5KecyRdoQS7gKiS1gekIecmAGWELs+KVrW40Z5aYt9wRdfY3A5o2QO9lqRxhqRrlGAYDo2yA7hG3Nvg+oiwupO6knBzEB3WF1zRVTa3A3rsgR5LEseXdJUSDDNdoW0B+gDZBhwj4uI8dbvD7a7pMLzeiq6zuR0QvwfiVqQ3XdJ1ircLUUH3IA1Qtw2QAefimk4zmNA0nf52S7rSsgN674HeS9KDLOhKm7PLaIQtwIi4D/eAvLZI1WYwpWkqjO+2Q9d67YDGPdC4pO6ogixFq11oCnEP6s7k3WgqzWBS01T6qy3IYjTtQN+EtiTNTK7pYotd9W/lGpC+Kzw1xWFaKxoMLzbXdbUSNkDTHmhakjiiW5ebzMp/K3lA/q44VQImDirni+3W9Xa3AX0T2pI085y6XglWHf+DuQbElRlqnpj60KB9rZ264nsDNO6BxiV1mqArbs6o+rdSBpz70AaElSUNMXMZ0UhvtSBL0mMDyiaUJelB4vqS9DKq/63UAXEbvA7EyppGxuRRo73Vmq5Z/PrU7YG4Jd0kly46mmSpGLbA6caUAffKLBU7pu8KtO8iqfTDss7cZCK9rWj1y0KWzGh1dDJN80j9Opk6iqgz9z5TdxYlDWxBGuF2IerAtLKokedLGuldVGGk1ylrTtHhrzHmu8+ghxERr8bceG4zPMZNOPo8ZZ6KV/1RhOeg6FO064wefw3xLG0GvQwyXaHtQR8g2IQoA8StrGiY+YwonK+0yteviJH+vPm6swlArCxi2M/YZxE7/kzCUhiy0ks5HAa6dPNpsOegYtmCrAPrHviiIwtW1hUKFiwK8kaLyl4CxvvcyTSbBZwkGmyDKZNoMAXuJukEXtjqgfEuNbZqTqRm2oGkI891nfGvR646VPzKLBXDCkGB9oXWuSQ7PJw6l3q7kEhO44A4SbIFKBzqnivKXTwejpVLD1tMoapbnys6NKzr+YyVeQ2zAjTC+ywp9eVAmISqGIbEUcxD4biswc0RH/NKXT0IY6PqltgsVL1B9GieyGfRoR3b0rC0rFCxZFXIf7JH8ydHZ2oBnO5iUm8YbopqHzpFNccJRX6sMskB0lOINE1V87e1U/tYTs1fr11Hn9sifm1FIa+RFc7XWVLiDN4oRMUyT6ELiBRiDhLF9VRU4tuB1jeiPtWcHcthFbcrErC2qhDWCAr1ddZ5JILZNR71hqHsATqD2uOEoT5ViE5QFx5N1h27krEpErC4ruDXcAryNktK2wLIC0+x7KCIC8gUwRyU+bzSSgT5ydONq9iUjk1pAaujIhZV4Nus0TQH+kIjzjBsQqSI9iQGfajQSAB9otFomvhdCZsiEf+VisraHCYsLHpa1vYAawrTOWGRgAkTzW3agU05sSmqxW+HrNLeboWlO0xZWLpl9Y3DdElJJWDKxKLesIRNKdgX1bwbdZX630zEouuGOSWVgDldI9G4tnMFbcsaS8KkheW0K2FTCrZGm/8PVGI5MKsTkrK2vIK+Y0FJL0zbSLpZCZtyYXNUwlb0fxMayYV5DxJZ27EC3bGLpGFeLxwabOoBeyIJ26MSdoKr8N3mlbO7iXBx6GFXY4gLcGuKs3UO8RMhkVwmXQ57Uj02SCX8xymRRMzshKPYpXsQ15QmC8qZMXXl6AZVD8Il9YjRu6HilyUKbg37crs5CuZOHGLWsQl5TYWhP5E5Oub2HBrs8diSemD8Wlr94jity6oKfg2vUF9lyuknQ6fQYFWh8AvoFM4eYahPNI40GQrHaU83c7T6YJqvnR5PriXiyyHdY/Rc1amQ10h/F60+mD4zDo6C2RNHNsopJeyLSglzkjLeDzilbJjdc1R7eM4RMSNFr/lweHhhAPw1RNyissK5xqmQ/2QRb/+308Xhp0OnqEZdFG0BlaKZ4zpFfuDgSNOhUOgsNX9sCkzrqvmrMcboQbk2IMgAzYuKCrKGKMQ3WaUomD9RqE1RKW/7klLe5hSlPB64KDrm9xxxkoyPTkP8sjKmXB2CDJBFOQW6FRwV3ZtMKaMBTiiiRUE4snmRnNmapJzhgUqRDUClOGdDVtC6V251iAP0WBNE4Vjh0MCriDiPiRQdFhaK06Agyhmti5w0GpOVU/CgUnoLEsU9nekKmrcKy0MZUBZVFWSFrlDfZCfFZcJBUcxxWVmdbfbkrDDFVyW9HwgUDRY6ij4dvIaGvYt/mjCgLyopMM4XqJgniO+piyKYAGGoxsRLlLXCslA4bTXEpVtpzwcSxWkCbgadD4dGd1uXVziWQn9N3ZqcRp2vargJ8grHS6cyCGy8GXSukr9calXm04ySR8/aOPM5T89fv2tXZv9ApvA2nBRxPtMVtOyUvHZMwPG81j0grgldgX42T8WOcRk7JuB4fukIQzHipPBTTe3NWN3PM3XDg5Whw8ZAkeaD19Bjo+pr9T6rkNbKA45FHRp9tqZxKNSxep9VSC8dZTyNCBRxUQ170LCkc7JiBIQhG4BDQ/w+3a/JfUHBP01elNNgnitR0ymcY7wvKPh3TqSIRoDiXFTahLQm94QynlZUhmKB6Qpa9ym/RndbUbD/N0DTEDeTFY0OxazgbisK9r0EKytDXpNgDwRLKpgsWpEZqgXwGnpu0zHguE0UsFbZh6jBZiZq1IwaQeG4TRTwzjkZmhmF4VpT3oS8Jv9EoHBWnKtA0dCwS36A3BU5XhdrA85VQTRY5inUFKNhFeSuyPH60skM1YzMUJckbg/ELangyUgBKyOD2mBEo7lNgrzGeFNXyGt5HRiXlVVYZilUzVCVMaabmsLxXrrMSLtyYg9OLMnPVs0Iy0DQ0GuX7gFibolUDGvlnTCiwjJHoaoYnaIg5pZIxfBeymbETenYg44lZTx6rATrwKmhxyalATzvsKKBpZyMwLKQdFjMBIW6GbpRgecdVjTw0qnvX9yEuKTunsnviRENcXvkRjDpmUbFc61bB7aFoeuwubtso26HstFg0jONiueLKa1EFnRhDy4sKWC6a8MQNLTuEe4RjFqmUTMuVXTktTKvREn3JKGy18KpwahlGjXjiymuRNfTsAcNS8qYLy8lWIFTQ889SkNYjIpr1BQs5KsOPVaGQ4nsXs9Xap9QjyosRsU1aor5N0f8Hohf0o3NimYY0ZCwRZAh7GHMZOoe64SiYwUUZ3zaLmO6FtmiTqxUF6MHUWEPYyZTt+CfHAnYAglYUXO75c1A0NDGcsanvXF5DNmT/codQmU70Rm/eOTSdfTF8XxeBk6PlBLMdyYU4Y0eN2Ydsif7lTuEynaiMz7tP0/ySvpqDuxBxIqagwVlKbADVUMvkuezcU4GkWwlR+99yqdQvWAiVr84pBt+tjNn771P+Wy8N+NOI0okW8nRe5/yKVQvmOj5/GFRNqMuJmELJGFFzeH5k6FumhUNjTuEPG5K+zgXVodyz7wF92a9Ke17J79xErAFErCi5kAYV+IWg6QibofQJ8p4GnHrQ32CZm5CXyjj1XSbkTejB2xBC1hRcTCimxFXg6qh9xbFeRoe58AGmLZeM7jbr9PwbqoruRdSHbbgdljRCU4KNeNg6LZ4GaHnDuGaJphzYQdg2mrN4P5jmfDJczCIGZUhr+PEjAbJCUpzegCpp/BWZIYaC84h4ncIbZIEawr2AKau1QxmbIskfPJEBnVW9I2oHltQPVZ0OdBSHFaU9aCO0LZFrk9RYE3BLgBlpdNgStOXKPjo8RTRCKeMxxp6wqTW9AhWW2oAsTBkKxpDjsbLCM07hCATFFhTsBFI63TM6mSBgs8eUGQjDoq4hO6wAz2B15QM6spQjXC6IJxDNO4QgtAVGCMJWwHfV2GZBU6mK/j0aQzViIsCS9BzA2oCsyniqQqDGnFQxHDQhnS3Q3CN7IIx1WMzYM5VWGaBaZNd+PipDGpEY5BFSFicXAHcpmilyhTRhkLh4wlD9N4iuMIkB2zpEY8uCvB9EZZZYMpMkvCdVbKxaV9apPVjMsVhglfGughtK+vlAL0tmpkixWVDp0A8yEM0bRFwCE31MKUeeHhZQJY1eJpJgCDTVI9vLXPrvlTMfVAUE06KvAq9FtXvM2BGYzQSOYpuQlDGahHaEPF7BFc4egIjTzs9Hl8YTJYl2MwsMMccPYHxA8ZTiLOgURzL0GM1UkuOHrNa0x0POoMGCwrFZVIYonWTAF+e6wmcHPVKDowrA0xsK7C5WQBb7usJnB8wEAZNBgSl9HOV/M9CIc6okgemGD0mZ+j5nwuF3kQ3RTHACUXiqK+nh3DWoccXQuWPKkcdjg8B+NwfuRNYQ30y55xT9KANlT+9ctWXLyIA7ujzUcI0gM39ljuBNVT++Lq4KZoBhaJjroh/Pim0GhVhMkPFXyuFJp6TQt18SSk9xxsechsjd3J4012qoiNVjTzmAeBy05E7OXzrfjudFBqXs0pZjECl0PM98UIhgSZw5Pk6Rcc3ZjyvWv/W650PjzffhXzW9qnXMwcLRD02P9FPn45aP/V658Pj2/fbKXDU5QpHssILhYa3BCeFNhoIhbjZklKW74zv06hHFjvV/6S/ndAp1C9myemtwMnR3VuCSqEXTaHQPFvnOD5B4ESPLO5dVjj6YuccDWagUmh5T7xQaGRJHOLnOpXTfYTAyQ1kP/wnl9zb6+BgXspzztMQLxR6vCXIHOJIHIfeU3nhuPEhatodP3v9SdK/vSAc4hYyfRJvCE4O8W8JGoVWEtwcesxUlTN9isC0m758fxUOtoVOztlgCSqF1vckcOhJkkjEz3MqqfsYAcpLLpKwLJM46WmLFwrNbwkyhwYOJxzapglKeuOTtLzj0EkYF/Gc1duCk0PjW4LG0RwFComWSZywHB8liO+4k4VxCSez3DAGlaO7tyRw6MURWbRM4ZqSdnyYBnnDORrGBZxw1miO59D7LUHm0IMCnUXTBK4pa/40gesvOBQaxumccNYOc5A5NL0laBziKRKNFjrXlNZ/nMCcLzjPwzRZEE6bDELjkPCWBA6tFBAaLWShK23BJ2qU1xsqD4uZKXPeDosCh7a3BJlDM0Xm0eaZDlFe/5ECW19vkYjdTWMrJ04mIXPo9ZagcWhgcMKjctC4S4kLPlVDf7mhEpGHmSMJJ+6wCY1D41sSSLojQCZSrZ7j6MrsP1aALO+2QEVJE8TOqZNVgUTcO4LMoTeDEybV7J6LVakLPllN7G82FCqyZ3NP7Jy7wypkDq1vCRqHJgIkLpXLPxOrcov/aAEQirzXnHCRLEHNHcLZo11oHHq+JYFEPAEal6reyY3yZ1f2jA/YcLSRlsw7DJmOlDO5IRtK5/w3DAskGt4RZA5tDJFOVesZX3Lxasrf3SfMTx9zrrXWM2dv8L/3bys0vst65hy99z7nUoVLircMmaS5dwSNQy8CXBP82WrOZ4wxnvmqXeeM+G/891WY5AlPmIbGoddbEkg0EjiZw8IbPzwhL6rCuECixzuCTCLuORyLEvfjE9qSxFuHTCL+HUHj0JsA15oO/PwUZEUHzEPj0PqWBBI9CVxb0YUfoJAWdGEBgUTzO4JMIuE5BFlPw49QKMtpWAEyiYZ3BI1Dm3sOaTnif4hCW4y4NaCRdPeOBBK9CHCtJuKnKNeWIgGLCCR6vyPIJHoQ4F5Lwo9RCLKShFUgk2h6R9BIxBG4tpILP0ghyDoS1oFGIv4dCSRaCeDaOgp+lEKQVSSsJJBoe0eQSTQTwLVVFPwwhSBrSFgKMole7wgaiQYCuLaGgh+nEGQFCYtBI9H4jgSW7gjg2goK/jV1Mea/pxh2z4f80fsXGoLYl7CcwCLuDUEm0cIA1+wr+FfUHbmKvtzuM2xaOBoHW4n2v4iSjU1vFUIzTg6sB5lE73cEjUQTA9xt3YmJI394xccngy3WKzuuONiRxNc9WchNx0tJbpo4OHAZP24m8EWo25K9z0V+970Tseg3Aa6a1gNWhEai5zsSWMQzAMU0SZhZ+esrWZ9uNadgQ6dy4tLBlURfz0zu7Pp4iXN4He2pPMf9bb7yztPfFZU/fvAAl2HVYU2BRcIbgkyijQPJsB6wNf8oJbnpPLWbBZqs80U5e5rhGpZNs5V3V/8mwyFWXZjSBGQSbe4NQSPRzIHQrbodNujPEicrauotEGeaL8rbE18f1i1LwgmrfZHBN5MkYl1oJHq9I4FFIwdcsenE7AtRrXElI3qXBVoMc5dy90h26PholimcU/KLDMgG3Q4rCyx6vCHILN1xAIfY0wJ2SrXadSL1xQSNZh2i9Lejuh8oVpnGaat9kSE0Y+TAtEYgs4h7Q9BI9GaBu63JMHAxlLRMvUEPE7pR7tYZ5SBy+qA4m0zjxOJfZMApllwOq0Mj0fqOBBY9WYDYLake+0WWRSzvvE3QbFIQnfTiOZ/QZJJpnDu+yeAuM2rAzGYEFs1vCDKLBBogixU9wsb1sJkl8i3qTFBvUNJ5m2Npj1STCmfPbzLAFxNqxNxmILNoeEPQSLQRwWWxoCdYuSA2s0K/57Sh2lN05hY4gj7rDQqcv7zKAF+WqxGz24HG0t0bElj0IgJcltl6gp0rYlnA895mgyZris4tgeJ6KNtjZAEe7zLAHrLS6TG/IYFFyxuCzKIHE+DOPlNNsHRJTPOVmzTYIM6WorNLYJCHuj2FS8aXGWBiW6Rniyc0BJlF0xuCxiKOCsBxTyIlwNY10c5mePdlgxZTis4v4blDnz6ssVw0vERCff5aBQB79OmkBDxkJQw0uCvp7V666vPBplCfv3hCZc1sgDsb350crF1UnS3eJkZoNCSrhc09dj9WrClaUmutdzTzEtlOl9pE/Qj4D92fN5GU5GDwougna7dpMqLbkfTxVmut8pTWp7w+72wxoiLZ4tKlrlQM3mkATDjaBL1Ei//eY64Ecp8BRg/o9enrufrVNq7OZXn/bYRmK4I8cufo8NeQSn9C80MnQbIlUvM0+NY3jQLNEfXx8Jl06dNRu1Yt2Rv8dx9Srm1Uu/PhYfiADPIR+Hq8ZAztVMcE6o1Qb4NrOv5ODi+HS4ZV91AnaLacGgWjSYYyJsH37L8E19b7nHM+aq1nzjlH7/ES9DGeOedca60553zG6GC+eQCyzjFVnyE9RbXh0uHFQ9dk0cm42XFG+yiicGLctoGIt9z/Y7wCONFoMwWOpz7Wn0KTBVFHV4/xJitIwN1FISgcT2KpaBVgyjcS8GsdnAbtRKeCPcbonkKcAX2QnHjWtZFmcbuMNfSx/iReoUC3fBKHX+yQNcI8huMnnEJ5Ci3zZR3bAp425bticHvkeEIaY3iQrBCUUK66w692RhTyPEkhAm1MHkPjbE7GNAfC/IVETHgqGFiF89G8FsqPZvC7HYpCmaeNiQHSGONj9NmyDm0OlPFDd5jQcvwEUMdonsypoZLV4Le7oFCncRwvAKxCfQzNczkZ0hxI08VpMGNWiACiQnoyr2d6wa2/xLmFDoUAAOcY7WOonyrryO5AW0hmzNnHBACMQnuypAeLX/CwkIx1/IwKeY0+pE7VhwQQN/GY03O8/EAZo3uwdsPdv/0Fjh8XRsb6GrmO0DTRoSMzmK3FpEXBXwSF4zGiAsOvfm6dU8FdoIzRrxGGiJunjGiw2MhYx7WMyWN4DXG/+fllLMcbroNCWQN5hJZpnI6MJkWOHx+OMcanMBps9he/Y5mkkD6gj4lZw/URGmc5RlSYXBXsB6dwPgWaBsX/3tcV8iRdwX46xhjXQBzSZykjokmW4w2f+xjtUxwqZP6tz1MxzeE4fuKzVaiL4B6heZI+oMPkQyF+kRTSUzgl9vArn+kabo6iEL9AG6NdxMkI9VN4HXja1BXMF1ahPwW6Eln9L3wnFQVzypiYb5LCsQjOIXWKNMKbFDh+4ts6RvcUUY2s4Zc926hZ5ogcL/jWKPRVUEdomuEa0GByUQhfRYXyFKbrkT3+ZvZoXcJmoWqY41TwX+EcY1glDBE3QR2QTTIcF3xtZEyeAvEOUrJZ6Nb8K5j/MuSjUbljSsvxju+jQlkF1wgtE/QB0aSoUL5DGWN8CtRbSBb7W92ceY6scAxAxmhWcX2ERj4d6ExqCm4gKNTHMHITWeyvfWLm6Ap2pCjEVXAM6XR+gMBiy/GO0T5G+xRwchdZ7O81IZWntfaUFP4bETGl53jDqFdoy+AeoZktDqgmHQp56FDIj4FwH1nsfzRRrS2R1f0vlZhHo9dKZdJ95qrCWalxXyyT/quqssZdOTFnUUhD6GN0y3gZoX5LRMEOOYX+HAhyHyW/AzI+eysVz6DhOJs+kQbXR9rVOVl/qG7mMKJgxg6FYxmcQ+p0l0WB4w3jbYz+OeDkPrK5X0nI5sfSVNsXOve2sMVzVtzPJA5zRo6fGLcKsg7aCE2zZYtOhaiQFMqDwNQJyPw7CRmX+hT9rsztknbcU0y/kjhMWhWiAtoYwzphiLjtMFQ0ClZBzIMAeQZW8zsJ84LnfNlU+cl7g8y1H0kcJrUcF2gmhXMdXCO0bEdSOKF5jjE+ClydgM3+TsI4dy+MPZWfrUsXF/1P1AxmzQpFxSjQrOP6CI1z3QY1haASFeqzALHfR3G/k4w5WWDccfPTeeVZKb9QxrxdwavgVEjr4BjS56r2OI4LVI2M0T4MTJbb2M2/WeXt/f6PIJenJyeX2tM/pvjL3D/xmrm4WjdcnJU7OgDuqjLTFhxXx+9zWswbON6hGxXaQqgjNE/V7DkUDh0UheNpAJPlLjbzwkk55/+zkydr/tfrkzVI72T952Rcm/KpzjzGMOiWnExIxqQr1o3FbAyD8depmLkoHEqQMbqFvIxQz+MGqD2i4JSCQn8ewKR+E4/3TTAY/x0U4/lXKrgW/qbQmen3Sc0AkxQfW/SPg+kfxoSjeYmRlirt7jEfxksurHbjfoz66zBMZLhyWQh5SOXBiGBN5MrhgQDEdg/926TYd04/1ID0+6T6Pf9+EaD8Q3yZjNF9W2Fkqcyqv7kB8/eRAtDlAuMXQPrAiWwM3EZf8bS7w6rrZA9YDTR9Muj+EWSQzyV2nriUrIQ2QhNPG5CsOZcqzwT485Y+C/4327LGU2vxBxJY1u97GZ/v3y8v9R8ShNM9u28qWNDf3wF+oww8TgTe38ArdONGMOgXqtUd1r1Uh+Xb6IAY6TfIH4sC6zxtKcaV4hBxNPeAYozl2uahAFtuYHyZIE3AejfW+q0zk37j8Cyj+0D+/YIB5R8CV169tc63XN8Tjap/4APM36gAxclA/ZUCzQAM455zYgXs9NgoRgKq0X8DfG4KTLNYrn2uhGuEFpo8oBuTFouPBdgsav1tggeokvIAuL8URtAvvST5L+hfMPde9c8dJCMAl4Qk49d0iP+E0PqbfqMHyE4F8m+Qxm6jA8jGmLtoVnxpoumAYND/Fk6DbpJjMdqVnIzQyBIHaLClL9YeDDBFi+Ft0oGidQD2IcwW9EvHRdvC/L2eg384SUJ1QrJ9S4Gp/yA7ILcB8TfoH8QSIwPwBq+pavlveYwHAIZx/xbIGs3MIaullXAM6SxuxGWK4+r2yQBblcrbxIDkXAD57Hr0a2dg7AL913rsl4gku4ZMkt8y4f1PwmB6A9AvUPjxMRJNDwDNqFPd6PhST/N6FWP8GGgKPKYIXL0vhTpCMwnaAHGWlOWOZwOSjrxMPID8H/jNK9B2eutvVei/RCL5GPEVvyMD9T+IALwe0P9xJlR+TsZjPHgng26GZvmWbAje3uD1YzgNhhnO5eiW8jJCPUkeoMkSWU6eDk406N4lERj/Ri9QD2L8pRI8v8RNssyF76hA+Q8iA9VJwPMPUhSneZpJcVaeCFb8lmFUBd2oPwayhpj7DNcvSyEPqSRhRDckcv3wdHCikd4lBWjeBZj2obyT2eKmvJPRwsHVBvbmk/JOZsu1Jyffrdcl5PrO9G0A2bujtqH0yXzLLt/vlEKzeUmxPL1KoQ5mXWKbjOso3N3oT27dCdWg11qrpHTVd6aD8k5mv8Mm5toj4GvnKFsayctIJAUAQq49AnVa8co7sX4Hp9TagVZrjV5uA3uvTWwDe/OmdGPUsIR8P/09iE+H3vImXrW/kko33rTJ9zuzFNtg1KNw98lowbmBy7mA+8CkKmyHWeiCng1xCqrRJ6IVviTQDFoy6H4MNAXW+9IDiFkKfYQmDvQBmu2oD3A+HoLG8S6pQPU6UHeXMTswwxI6rkUvdaxPIG9SZx+lNFlvqUxWfQeIzo22eYJNYIRlsCoMYBQDqEqT9ZGKsV4Hl7FdwmPsNXC1TRMYwExL4zsiCd91h5D0RiNZgZvviAqwpAEMwNLSOcxL7FifwOVU/LKkgTuCirHW3QMMA57lMoCu0FktLoM1q+A+B5cxOzDC0oDkVCDvbmGrJNs6FeYwKvTLYNiAL63GgO6s/Gs4Dabb2gMwrhWHiOO4Roi3wvIJzeOhKtR3SQOycwMjbCp2SQkoksKgBcUBzUlGlcKE10tGDUoDMEnKbcmSygT6twSY1sTcFLAiJYOxxGrLC9BU+pIMPxT8uatYlooBbcl5AHlVrBMYmwLcUhwwgwBX5JVo+jVHktATSXGAy+OVCUxJyeCW4gALklLOBpZzzkFSMp4gTehLw7JCA5OUjBaUDW7p6kv2woAepQrckpT7EgZ+W2K1pbANmwfLUgaupQNyOxA2je6BRNKvUmAGmtHAMO7/FCdGMfAY/ddA1hB3k+MT1rVQRmjh8CO0UoV4Q36E9Hzh7UIgSkov0IP8AkmSgCqpQZQUjGdJRpWkDt1JRpWkAPRFakCQpAi0bxcw8jp5vQvIklSAovUCLmafREkTmo2saEDjDSoAmxuSJBWgyp0wtI1A8xJQJOkCqt6RZOXj4QfJtBZJNi2TlIC3J5lk9EGRksEtSRl45AJdfjKaJD3eBVWSmjNAkpIjNSB6L4wgSQMsaO0whhWpAnORLqDxBCUDslchSRJQFqB7E6b8hlkAbh2JsKsxYN+GbIjfkWh66zIYfg3TFdhuOh6Bdi0nI0YOQR2hJ5ETFqPWH6E9H14u4bW1W9sEVZIykKQABElKRZLCZEpSMLiXMBlaE/B4HUxrBuq3yml1gkHTGoDhVGA2KVySBDCCpAfglqRxkKFqrUB2AvDuMlC9Ca9cYDqZJDMAFJJlrZAcpZRSB8keoEaS0p1UJA3ocg3MSUDbDGZYJjyS3k2oQUp4ui6tA5B7A0lrBYpjwIiSBOBVgCJJ7SBDlaQLiJIi0DygexcUAEgkzQo9GXwpRi92NXgZ3rq+oxlSJq3714DX4HGPPENeC2meOEQjjWkkm1PyfEb3BNnc094t18yrwwFRUjZokjLwLH6FIikMGGF54HIu4PaA7lQgf+vA6L33CZdTgegIwHmBoW0GRpCkCjxa+8HEgvMCwclA3VUgOxXIXgfi6yaZYF1rlbM9wSwvB7cAl9eBtFxA9SrcksILFiR1mEHbDNzLFuhOMHjlXkBbAjCCNt17gaK1HkwIkrLBI0kXUJ0MVCcYJgBByIRper3O0eLrxE8+BqzyFZ6flJ8Dhwb9HZGK9f6m0BdDnQZ9iAQS0/hTgk5R6PV+USjrmZPnPfXdUghvzgWwsLugK5QXqFoBWtgEg6DcDN4gSRFMbgWyk4DqNCB8m0CWpAhpCQZDfgfSMoG0u4Gs9QWCAwynQJM7wOTewLVrQHAmTJ3kVyMJ9SYZ1hrJ3lqrJXlMPiQT9Ammk7xUIHsGUekx6FEeIx5xHyTgcQpQvAz0JQO31gC83oQh9wXCUuBVKB2saq1Adm6gOBUemVhJiZgnQ7l9hN7oRv+K8hFeP4fpGmJuOBVO3G8V6Bfz86QhKoHCNH48NIwoRNyfFGQ500iWW/hueQi3pAncuxfGAGaNcjvAvLwbZjewluQ+8HodkHsBxelg+g4gt6O1AM9RXoBX+weIzoSpNQLNmVA8oHsPEHcDTGsG3m9CNq2RxDpJeqx3ckBPQD+6lwYkpwDdwFqWW1hrcDQBRt5cwO10IH6qQHYyUD3g9QZMrR3GAGYNcl8gOA+QnAljkGzJYDnPz2bjNhi/YXzm+TngNXjqWSqGCdAUymLI06AOUYkEpvHLZsYiFc0ERoFxMdP4s9xgXi6DkCUVYO4A5nsn7ZOxNqcD1mvWfkL1JkyvAtkB+rcMTK90pwFlMzcZqAcdkAt0JwN1SUByEvB4HdAe6E4F6idP8taE7GuBpGAjyWbcQD3KSwfkvoD1mnXYFkZykrFWrwLZAdCnBgTnBrKTgeoBfQkAs91R+wEmtwNaE8Ao0WLOu8qHhnFZzxdEftj9HDg0mNSSgmDGqCBmMfRp4hjV8zEn/Fr8UFMomPFUONdyjddFLyrkVwkJQVIwoHgZyPoY+0JbgKrjBGQP6N4LaE3A8+0GXm/bgbwBkKQCXAcG3clAdSqQlwrIvYDiAX2XgMd5gbKZQAIQSWbFkaxrF8m2IZAsRv0Zg+FNePW1LlhclMbC47yA1gTMzQ20pYPJbUB0CnA5GahLBrLOge4ZDOcGgua9a3yIQYMYjFviXP1U/j1M1xCr1RXKFEaBcbU4Dcogrf6ZzOE8YKkYpogKtCs54edqtKpCepNEEtPagOndPyHdBpCk+K0cZKB6E6ZzAeXbA9SfS8BYHiDtItCcAhTnBcLyHlQgOxFouwsoTgeyFwATgEIyKpFkWSsk7w2J5GW8RwBage4B9ZPSAGiOVBfCMmE6GeibB7gXoHsdTO4DJKcA11K/JeBxAvA6FdBvEfnpahRL3IYg3U84+dT4PeA12JQcFd0UKAptNZRpnAxSyW6c71Q8zVeHQsecopAWcsJvu9cJVHRvkkTSnQhwORW4vikOoEoZeM7qwQ1cHtCdCuRvHbh+rgB16YD2GbidB0jOANPaDwYgNwO3pHpLqkD+dgFtqSSdUkjGtYdk3lBIBqOeJOBdMlAP+jepAn2jNIG8AO8PDCBKisDjAd3rgNwKpB8qQHEyUA/Sb1ENiauPIYa32N1SEFKilWimuFgMht8DRYNZpyh0zBkUaFdzMguOUaqSjU6o1O3um65wTFIU+jpBOHgYBScKgjfJTVIddaAfPJucdwrzYG5COUsGJIUmZaA6A5Di88GA9OE9eYG4GPSDCmSnA3KBLt3l5AamdBWpAlkKliS9gJQf6QFurwFpaaRArSQd/L3QScYNjSR2PEBeClAObBPuA1WYOwXzMlCllhQA8yLQJOkCbicCj1STZNC9Dkj5cZ7NlSVVICt0qQJZer2yCW4tJ0bF6mUwaSgWR1i4hO9idGNg1Vn1BzGiQa8iCmkSiMKxGs5pcA1T5RnNiDs69eOnQEU3iVOgWyVyXLIZ8ULF81XSSIp3AeTlAiw4xbIUi6MHbikAXE4adXNLSgYgvWcNmNJbzwKAPt5AdSLwSFIA2kEDgmMwnARURYtOlFQAusLM0uu9XZImDKnfUgEeJxg0rSSb1kgCT1kgSWwcZLcuoDnBoGutQD7gdsJoku7gZOhSuhx1rwCX8pQ0geA8QFwqkJ0LuJUtKADNM+jSKLoBC05h6YD0NKkBUXUzw0WiXSvRjEsYxmO4YZHVT/iHZnMvTzMvoRrygyCodKMQqWhnORT6cqjTuPYAyVay9w7G+5ir8Fb3qSg0zNoVyiKRqlLcN7ZQNc5xv38LCEn2NIG+RICRpdh4pGhkp0GUNAErUqg2wmYGZesGxEr0ZlDotsRm4SwD/UsEutNhhCUD9aCDaY1AczLQ4mhymkLlBUYcXVIH+tXJCzBjsyAFg+m8YGEJJG+NJH0VNxdJjg2O5GPJYDoPWHReIHgd4JZCsRmkzruruiA5AwuSKnBnq5IqcC0JqFpfQG4FarYqZaB6wAxtSglgJCk2Hm1CJUodyDdZugC6BdzJhLWaMbB+G/Qa4gz55OjgYm6c7a/b8muXwfSD4NTgqVAVKmZ1CgzLhWng5ZGJIz4aKqZpsoKYJTLV5czRe5+ORl3BmySR5NpUgCxJnf2QlMGypGQ8klTZW5KkjD8C7iMpAcxulnCrjuMLzPhBD1AkNbCk9QbyAdCdDNQDIEoPfsu4WdKL+2oD3JJUgSKpgiWtF8k0QxZMu/vl1yLJMnEDt6QbLMntYPLL4lqSZFAlhcEMumFESQVubWBKUjAYQUoGTe6AeQIWpBvIB0CR1Nk37eCRB68kTfYFa3maZYO3ioE0tfd6DaNhoxjPL2JEg3HIUjFOg6ZQlkOeBkEsKPgcNcw0VoFxhcJl84skDapvdMJCC1K0TQuS1IBRX2hyx2YkucMZQX0ZQZI6qyXNpes0Nvx+nYUB9D5hRLkNiLsEPE4FspOcIil6TcF5JOl2RnBsaXIbMPqEkeQWklEbr4ZZfwvVGlcyyWtCDRh9wkzygb5R28wkSQWYTzNmksIA3jqgar0XS4uygfUOVPlA94qTJTUgerY0SUq2aXLfZQRJbZlhybsDi92W34BuDAv1QwkALpppx23Q/yAIKmJHsoKYeZICzXKuT4NoQMGXTeHEvFWh/knEvEdCs4uj2tcsKbZlXPLrBBiX/FANmDXITwOsBikZtKA1DKAF6TJ4wtHTD8+kOgFG0fbpveug91683nt01MCK1mIwL0kVrGoNHXiC3AI82pYJMG5tS2sN+iXk7aZys++V1FoLMyoDYNYgPwJtpzoBq0FufgFmDZIUqgG8WW4YMJP82ACsRfmp9148dZhZkp7eu/wCPHLju4xLfjLoQZLihB7lpnepHqsNo2NnNhgt5I8kvKvldgQr/yI4NVhHukLBvFYjLYc4D9J0FV86KsaJogLtAiirZLxHPp1y0HHOOg856jgl+TloH7P8HPTXhpz1l8ekfY5yQ9Y+Zh2GHHScs348Ovzn5qzTDFwHUshRxykHHYacdJqSjmOO+umY9IMh6zTloNMctE1Rp8lj1jsummmLs+oELtkmEW9Hs2JrN8ZPYkSD+TtPxTARToW2Hu55EGWugm8PBcHERiOvYNoaDa+Z//N7w9R/l3dUy23BY4ibgH82VQc1WdeebDD+IggqdF8VhY6ZowLdek7mQZCZCr4WhTITikJfAaYt4f6dalD+W3I0H+xNBtMMENuGJ8LsxsBeb9WfBFWlmy+MKBxTGVE41sM5EXybJ+HrQEU3VVCgXwGmLBDx75TR9V9mzNd+zBczbEIxrznA5z7Vs8dkMa9NSEXPv4kVDZYvIhXtVCgK8gCoEwHXJOLx/anQMXdXKEsAx3QH/se1ld5Y/G/jkV3M5Z0j/uGuBUmF4VNVaJjbKzA8QJgKh8xwGnxvqJgnOxTErIEocxX8G3VXKRuX/i/yYlBVxF5ZKqbJ0BXOB8A1FUyZTgJGk4YnCwM0TYLQZkr4N8oIpZER7w0rGqxXh4aZ7VCgeQDXpwJ8neswGG4KDextQJsFyDKLBPwj5UlSIl4cSCpMF13hxOxWIz0AjskAX+cpFuOOionuHKB+Gtgyx2nwrxSOWg+LVweqCh2AQMUwHZpCfwLcswH+nEKyhWbRcHR+xDUPYMt93ePe/xj9F11fT2yprX/KVtUDQKqKmD9URftdfT1x+Do4TgTY1O46I5TPOp7Bf9XXy9dCfT08Atjcb6kRd4fKH35W+ka36RStXoLBX7bLTakfDntdl4Z6yd7gL93nUuWrekSL/W4esvj795cOm17L0Yzdex3pZvcWOBqweTd9pGL3njlqd2+Woxm79zrSze4tcDRg8276SMXuPXPU7t4sRzN273Wkm91b4GjA5t30kYrde+ao3b1ZjmZs3/yo2b79v/9//f/r/1//8z//8z//8z//8z//8z//8z//8/+i3aHNXzkshJhLbZ18zmyFJJubaJy8/yrWX9r9U6baJp6Z8FepvMz7p+mRduHdDf2bJurXmch5ZaPDtuyke1P+TZwoEnAmblS291wn6l74Nyl8S8CZ2FK5Q7dv4lF1mv5FPd8ScCp2schIL8lDOZlTddyd69+kvXrA0Th/VRzuTB1m0XFgnfoXvUiyOxyOj0/iMHtx6r+IGyS7w+nYfxCH6YcTf59Isu4pJLvD8Th8CJg+snb9vp1k3OKFrDggH1cV8z9O+X0KyYGtD1lxQm5XfgFbLPw6gSTvLZGsOCFbXjbMf7E2/br9FbbcreCInK7iAq+Tf51Ckh0n53Zl5ousU79t4DufnCwvC+5OOccv1bm9nHP+oRBj9EsuxmC5GONcV/ymGGN056N8Fe6JzQBLH6YTJYVqAPP65orw3eJcFpJVS0KyzRS+R9TDVKxUqz8d9QvBnaHht7PM+kq6jG36koV2mqlU0ytRTQD8VZ7O1WfC3bQlnI0cL8sdydj2s+YU6ebwPQsPp71VqA8ATrQHQOHOZIXB2XE2Oq7cDYXD5yiwmtQ4PgqD89WItD1Qqbdt3gjC+XQ0kosO/cJpPLqdRw/n+SAMyHGXYQzNjYkIz6nUWutab3qFHoRkL7cY9WQUeJn1EkCfTtfxcFLhxwawAkDVqBVOVatCz4pgNQgpCYDrWjsZlSurFiaMHMy5jhLryADtyu+3BmS8nUx5kjIMTzsbXakrrpMMeF/nI8PLBvUHWlBhnTpuzmPQoyT1LxfQoDdlKJWsDl27yaeoXvNUw0olmaBr9WAUr5JahCZpOPXMnAm33PIhGMyw8Lw8WQEU5RJ2LN7KwOJF8sFCPhidV0at0SVF3HhU8C3Jz170XiBrIb8qH0w0drcylHvBDVLcij8XWV6eUO89SHqcpuPuWdK2OCY3A11+LFTdqz3u1RSKw+JF1S8UkgWqu6rScS5OV1HPNycfRVxL2lfn9TqQJX/dnfpzYdZRlYDVqnTMOyHFASHVQVVqOBi1C8HNF+vU8eNY0uHrFCcDVtqk+SSH+aRdWHWi5IVC8imPUJd64WTseFnuep37bDpJp+YE5+X4SQ7LTSlYTlT9nBPOSr1wOD6uwk0RNxxdrEOnibVpjRw+yWFj4Htg/VEezCfaUi+cj/tFx82303T8OuXocZJTPXuTw96q3Guealro2rgjTsiel8dd00lHETcczaXLnYC1Sz/uqfq1rIib8yQ57oBDcrlyN2XWoePbaTq9WLMTAW79wVtpWO9KxXx+BRyT5aLj5uaUs+lcR31pcu8l/wEnSloLVK+F54VjcuRl0ohk/xBssXCUWadOM4AF713SH8h8i1u7FcGikJRz0nllFZyQ8UNhbTpuznM0llv+XPQHh1KxLsq94EmyHZMsLxvGnZAVH4cTjwJuPLkBXm35dpU8k6jGtYtq0NzTXnFDLte5KF+lMSck/YfI2iUpZ684XYfRgBk26Vsiy0xXBtarMqCGzvrKa5WM56J+ZYeckDzx8XGKpIfXG045GYAlbbOTDxI53ESkWtYc1aJEofhXeXGmkg+OxZGXHaNOSNJ+ssUkFchOwg0HDaDoS90lkhcmH82vJc2/CsmMmWBVUvyxyPSrMhL5M+PjxfpIBbrcx+naN4CiTxYcd5N8MOmpNqw3pQOInWTDVNN8I5lxLC68zt+Zkz/FfHqdGBoQvelY8sILUPSNkSWXBklxM1VLa55qRqgk2d0cHw/4IiQfHIsLPx5fJeFlwsfIOm4DbrkJ3/JSJkDRcfJOAyYdVXFrWbs7391Bz9rkcKciX/lZ/Ad3CK87Pt+O2+SHDczWjbXoo31JmC1axfrQ9O5gxhUJOBHbcHR+3+qZaxV+6b+YB037vtta0tf2IWF6aHEtcLo6TMqcBByIk/D+is+JfdNhsg9v0Od8ljBPdWA9zsiF6TIlASfixgndF3ljt46TncxLP/kcyIUt+SPVYbFP9IAjcZ4w4tvhtKiPoW3mHfSzdVMdVutL3AZ0RW6PZdc0KThCh6c/JegH4/30tyb9fLzf/pSAjelpt8dOd7daIvaG0lq58K//+Z//+Z//+Z//+d8FfdTD/4pzg3r+X3GV+oj/I+6iXvU/4p0oI+l/xTe+b/3P+EySI+J/xnsheTuc4zspF/7kMV81/C+tQj4Of+SQa337ZL3Pwt37Hf5nlWvtwh86cxqPwgCw9HfFosYT0p88joNXxy/u+KvcoFrOXgptd52xTX9TodrdeSiWL/xNpOqZjvMu/0Weanc4D3d+3n4Xec+Zdukvakp3ODL1Xyl9eL2hvzfy/TicieMtU6M9RX2aaPV3Sc7QxzAWS3/ReFWci123esR0tOX6XR6nfFG4e7+D/t5CkhUn48sYDot5Sb/LdMKnH461lrDHC8mKo3E0IpYHoF81szb9nR3o9zwkE45IA+sP9N+lOfnvuIGOrZFkwuG4aHlDhedXCbZM/ZXRgLynkwmn4675PfevUljr39EB3JZMuXA69lQb9uRfZTjxr7gBXmwN0eN4nLW04x+fco5HkbXrb4y2lD1H5K65P08B0tHjlL+is4ZTk6da8ZXpfnp/7/h3FKDreC6mr1ft/fp0szZtdelu7U7uaFS0a8HF6NdCnWxbPSw/knKtD0A5uljbWajGmo9ivs15qx5nXBGqkk5GQxEsPmRYuo2fbZ9CeY3t1PHrpKNi+M+m9sEPzsTByXwuClTvhYscWAyN9YkK/cP1ITbj9D4KrFOnjX3d8KMCO3HeH4uqFuackHkhDNYiScHOdBwa5xaObuc+CIPD649U6+ZiORaJMjDtOkm/8LJWud258pqOLuNj0/FwwsHL4dQ2r68z89YbiaSUGB+jnYoS1TzlO8kH85V1yG+evoaXdfQ+NvEosb7aP8As5tSdO51bXxPJ7gGgHo4eLUU7Vb7TXMTNm+7UL2kAvFFS9LqOH+faZaAq48azjBu/BCGHw9ufjRx3i5trztQfSQbYpfX28pktU/uJXVJzms6bM/S1kwzQtftQlLdVTEfcezd/IhlgSe50po4L67MrkKVgTj4L5pQvhWTBQjoUdUXa5NCuuduLm4B7HyUDLMlNuOXsdeJuUiQV1qnzghs+eCEHTKe5M5GnWjEbheTAfHeGtpeXTqIBluQ3x8JRZB3a5yxJw7k/vM6rj5VkUkJ+hvLgTHxr1xRukveCOc+uOabDMAAubc2pOr6dcuBG3HAWccsHT3IAsTShKvXCoXgoA/OFZFjAvXfmPCcNoGpbcOPZXCx8eZym89sxfayvTlPqhWNxpHqvdWzJm4IbDy6Aof3rNB0n1qav5qQPw2kfPGelXjgZVy2s5c9059E+2JJ3ETefNSd/uViHzhPu9aFYUi+cjZ0oHYsP6Vf6WWGd4eABaNrfztBxsGXq6+uUD48z9XEo4444HieqeWXnfRRssaR9ZI0H0ylnhbV+CawWPkzn+RBIsgackB/NfS7Y8ixhsF46bEvTPrFOnXcnfrmdpvMLN33Ir4ATsqf64AvLwi0VA7Ckw8h6HTSnnkXWV1+nEz80Z+pje+GInLX0DbqX/Rt02hbTPuGGs+qUL4m16zzg3l9IUs5IXRF8Z567N+vclrZL5jSdz8X0tTnlQ/HiB/9qR6RAte4KQoknUgVr9Qr6eLHem2i419nF2r4EW0wfuzPkN+orrrnBeiaqWtx0CZl1Gl8YQT/YnOyFgR+WpyenOWl5etoU1kdS6s8m4hYnNPCv/JIZ10l/JPJUB/YWkh2nl8EI+sl5lIzXk6TC1BpYhyQ1prbdiVIY1M3thSUOePAuLzrLdbLgSFy1e4t7SDLMFICsnwycZGPkgwzFKc4tqUHdRNZXCgMLm+m8knQbjDCVDN/JgSNxoB53JCHJG5PRFv1o9h5JFSxusm6YcocTFF6Y2j7OpTDglp9wi5Q6YElTEpQsJOORyHUD67HxPdzMw/r8SPGoZQKXNkygOJG1qRiQd3OZKgZD28cx5Zf10hnljrEMkiw4EftO0y+41KhHzHaHWeO3unEfHQBD7uP0CfBoe7GOCVjcmWe4RdtLm3xwIA6Vkz0Fw8X80H4w/XrAfK4/0CWlk+yZ4w7tX8fN2l4cW9Ler3R3GHKxPINfKG7uPgCslZPrZARJsl2Ve3E4wi5wWLRvRyPqtM11h8Nw5ZdmzIdxBFiLm2C7EbS2TZdfD96gfd5Z0mE/sKrzONUcTsPyJQ3z6fkEtOCobkaQm7wRNmljt07T5g06fXYt6mueKDhAh3sCvbQvzOToNsCq9sWAJ2jfllmDztvyZp2HsYw76gev8ZLqcX6ODaBnSeEeZwxPyjkHnYaco45TzlHfc876wZxz0E+HGCNO0BXALm1jHSekzf9QD50ku8e0L8Mqx7UgJCkBy7Gd2jrfBTuLcp3WMtW4Jb4Ep/X+ifq6jmvU045EkhWntuGW/EOSFed10SjFz/j08J1xYC8GydFqKaW0Rr0FnNhdn1gdCYd2d+95Ig7u/u4LoyaH07uLuZTylFJSdPjX///6/1//8z//8//7MXWwcpCLxnp/19XUdCZr+OGb3KBazmS2Kd9UqHZ3eCntC/+Z8Q/wVCtOr8LP939mY3N9UVMqjq/5kY89/8wur+N7L74rjrCxzfRyRfMqQyn/zFQMaO6LxqvgFPtYGYv1Ff+hKeSS8MWFJBOOsdF4sOqEpPtD1Naev8zPhtZa2uOFZMJ5xi+hkYI/YyZ5/wPoJMOeh2TCQfbSHqwXsv0ZvJAMf79CcmBrJCXgJHtraU/5MzSSA399T5Jlz6AEHGWHIthz/REySd5/v/byWxIl4CgbqNYdsRT/J/Dy8n+9TJIdR9xbizv+Q+9a4kIjyY6/vZdXPuMMZeBPWUn6ucx3/us1vv0RJ1K9P+IrOZLmKinlA5Vkw7QXxW/xpZMct59zRSjFqAYteLHBvI7iM8Fq+JTbhB6+ZL4fbI11kGz5HFM1/4kgfF8vJ3ynHbHU1jpJXoaLqTyDb2nmjCu004zrfN/KYH2cZKz5oOKPD7njtoMQy91EGU3PM6HR7OEQ40TpWGyks4JQHa9G9Vm6Hk4OqIlbn4kwOBst16k7ABXXlmS4YxMG+3ISHrZ9M7g1TWTODneGSVTzQiIfmG7Q9MBFvS2kwemslT3JuoTTw3poJsCzlRSMbXSScfgehMH+3XCvsyrn8xnm0dycE/KybtoRGFvi4Ly4j3gjkaQ0i17LtAtQj9LY5SUZp30XBofljzSYlST7sNoRxlN9MO06KTAjJwsSN7iHqzemvXZhNZCUDLhqRMXJxAPPIymbd0lKxo+EATAd03lWBpYryR6B2DUeYbJ2TblOslp9bljVCoMkR45XGZqfy8rAqhdSAt5jrnKyoVrD0e1VKRnAbMNrmwa0OJznw1DupUSyOwCIJ5muCCZ9EZIMRiJH8kO7SGnqZSQhKQkAPNUH80O5lzrJALVMeVKyfzRP0t3qhV0woGdJ3u1lsKyEG88C1bASSHYHtSvjBBO4e8Ac7A4oWqMEzCeS7B7vrMW5QDWsFJIZetTcq1ICELWbLPo4vDBgZklKXvQmlqTH6Tq/lYHVToqH3pR2grm3FSNRPKxGRswnkuwO6lA65m9lYNGT7DCL0gHAkxFWF2Z97d6AJ2htTpdbsCTJnOuDKHmlkMxYyCeYsc0bgxEAboVMmE8k2R3UQDUtiJJXGslo+Krcr8oCAJdCVnwejmFZbsS9vMElqbBOnV9U/YInOWAGqv4Ac1HNmIzPq2O1awXzgSSHg14VwfxF1S9Ekg0AQq6Davcv89Ya1vFHlN+cqfPXqR+q0rFYSaZXLE2oVhxgq+ZngEEyrXiqFfNOSEqAKUpZqErHYiN5xfII9Z495ofS3Vr2RpCfcctZxI1njmpa8CTFXXen+SSHA6yj2jHfSLqVonS30Egyw0xU/ZyjmhYi53v2WL34Fo/15oygbXemzqvTdJ40t1A5/ySHM2zS0lrFohPFYz6TZIP9KBXzSXMLdaZnj41NSVgP5gRtM275MJ38oSkP5h0npV44xzbNrV0rie+GeS8vb3mqYaEpD+YdzZ49tga+BRtv1lf77kydZ9apc081LWRD6oWTrKf6YHFQsDqUtPCQZIWdlYZ5TzUtJKVlj91VqTumc+0ybvnQnPtDUQSL/SX1wmE2a9dKjGHl4lswH/n2E0NJC0URLD4ku8N+TzVsKKymfXemzgNu+DCUuuBJsuI8OxTBx5tSF9qrwo58DywOpa6Q5IMPFmVg43Ce3YVbPhSn6TxQvRbSK55nAtX6sUg1zAW+r4mq5IVA9VqIr/IBJ0rekHHTbjpTH4eTPlRlYLG+wnmmauFjVRmYry+Bnai6haoMLJZPZapuw+sMbQtu+ZBYhz6Kcq/0F86zogx82lPNC/J6rItqxaIotxGiez2vPOVidDNDebAece/ddKY+Pk75cFENmotR4ZqP8QATeXnc9njx7GKtm2Re+XDhJq9gTv/2YicF9/qB5oVNwS1fbLHw4VEGVNdZX2EtCOsBpl65u4I5r86bU7xkm7h0ivc6U+4DVast9aRB1WF3TN8DbtN2OlPSxdgV1iYpYRtHNSu+k/4VFT8RhOLPL56XgrsrbvkwnMspUDxJephyA+69hA4zOKzvQYOhw4z7/ED1rk3FLVIyyu51ohSNukmaf11CFswkKwhZcH6tV/W26Zg+4talwpu8KBUoXvGipGJA0gnRCx3IJ6+XfsCcKT+YM6VkTG0ja5fiwMKmKx2Au0l2TDUjCtlxfk28zncV3PYhe1OKHWbIXssvTPnDGVLuAEVnIy7FgKrDiDv0veA+m4pbdBnk3e0UZYNbvqeagCQkxc+xvnwlyXB+cfx43jW89DPMDpC0cS8v4tYyWKu204FeXwMYOm3e/QPTi14wZ8YXeLSfi8UH6NreWryFJCVggeO5G98Zx9fML+M9GXfqh9wihZMu//G2t/bvZmvhJJgXvl24Q37FNYChfcYBsLAbmi4BpjPsisOrP4Rft+RueL37TzRJOrC4mUdWdHh/sKTTG/fV99crXjBvHeGgOaslbQOnu8dkX2g4ufqjUrUeVgk/foknTWvfFfmR05F0GuzIko67d/0AfvAKhyPo0HaWtC9Tt8Nsmnvc0eWk+j2vPvddD07ZNP2AVX2sJyPqJ0w/1vTt0THbEfUjPWKxz9w4u1b1AuXu5G/JvEfb4TQdTs9q0Oe2q0Efq1N/Yjh5E83rWefmWNVxMHrCsuvGuHDWDQ2s6gdDm/Bm7UMzxqXT1GG0Sz+aX4NRo74/Bo9+Mr5gRfs0YTxJX9PE3hL0MQnZ7oCdLndSnoR//c///M///M//N05WUDggDBEAABBUAZ0BKtAHmAI+USiTRyOioaEgVQhAcAoJaW7hd/4l/gHpi6A/ED9gNfHWX9SX278tdqr7j+QH9V/XXrHOVfDHSRHC6p/xf9U/Z3/Mf/////d7/Hf2b8a/lN5gH6U/3P+n/jL3PP249QH9B/j3+e/zH7//Nh/d/8B/QPeT6AH9d/lfrI/332IfQA/i/979Jn/m/3r9//o+/Z3/z/7v4FP5p/RP/J+f/yAegB6AHrX9AP5mYEYGhW7mXMuZcy5lzLmXMFl1fnC3RMCg+XfjPxn4z8Z+M/GJzEkWdWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWmwxwy676amuGLdp5AUoIAhAxzUAPqHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDfnmTkCebb47fhyNAf5VCzPIs6tWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1abDAhwyVQszM5ZBXAj9cI4mRsJLHmoBgQ4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cMmAlBjl/ilRrw67+wR47przcIAhAnqhZnkWdWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atNhiWGHQLztDdDZFoX7VF6qFmeRZ1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq02GJYgqtMpEKGI77tBbCQsp9EqhZnkWdWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atNhIZ94ThOE4Tgza7B7CBrZG4dhet63ret63reufgfUOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHFOYZJySxtf7r14LwXgvBeC8F4LASRZ1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVqu1u5lzLmXMuZcy5lzLmXMuZctRrOk9ZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyWcBLZb3ve973m+ZOQMsmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJjzzYmXht2RNPvNmeRZ1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWq7s6BugvivonrfuXxX0FPIRvphgQ4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhvzzYawCEDHPmIXAIQMsmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJks4CVs7b/cuZcy5ajWdJvwEi4BCBlkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMlnAS2W7LN/7gJFwCEDLJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZLOAlst2Wb/3ASLgEIGWTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyWcBK3qB9E25tzbikcBIuAQgZZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJZwErfmwQMc816eZOQMsmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJjzzYawDoLY/GfjPxn4wKw/mpnIbzPAcF8to506dOnTp06dOnTp06dOnTp06dOji0Pxn4wl39Y/4NGjRo0aNGjRo0aNGjRo0aNGjRo0aNGjRn7Z0Dhhi3Q3sagB9Q4cOHDhw4cOHDhw4cOHDhw4cOHDIboTG6G+ocOHDhw4cOHDhw4cOHDhw4cOHDhw4cOG/PCM++A5dB+SVq9b1vXPwxLELyLOrVq1atWrVq1atWrVq1atWq6bX23bRAEIGWTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJlK2R8+KQ14FLKo20xRZ1atWrVq1atWrVq1atWrVq1atWmyTFUNcqlkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmTJkyZMmPAAP77lM/YM/6MHzWZ1RQFU1rJ2uL/H3fmXEKTKLk1cI7Wiw7WiwpqV9FoY4/FMr5REnrWEjAnp6JrvaWNsvMIm9V8G4D0Ej8xgWRA9vPaYx8S/Zu+zbdurf3VUC7C8Dl4DP04iLG7eGteuce9SmkB7KGbkelAP3bNA5cXmlyl3AAAtyDHYdUPHGbQpeieIx9MMTqa+m9hM4r8FTd1w5GjQhVR39Bswfc7bXFQpYe99ITwrgbp5fWRm3u+jle+60EEqN2FBi0P5PdiWZDCiZKjME7EzELipsMyq+A1+CwtEyG/iZth8ioIX/4QAAAAYV0GP+OXc7fE7C5fMI8mpvWAQUYg70FwRDuVejlQ///rkH5Vr9CxWDGEXxNhXn/nHvM2iLamUnbhxMO8wLIseK1dIAAsGeLEU3Msl3MX8dW93E6WGzyhCqktNIFqw7Lf1MrBVR6PzR/gLiNsxnUVV5i38HjwQcoVg6QpIwrBWsfNfj3lmYdOKtvv+GmtryoX8Q3Te5HPbE7MpiAAEi5LhBpzfeF4JyaosjEBqnSUV5kS5w9tBty4/X9rUf4lAGdtYX/WpTWsBgL7OlKgiafzfdFUNqPDio9JRpR6fIbbHjhxzrRiBxEIvkLll9mI3YQi/J8BC4wX9DSVsyxznQi4n5+9yyS2AqRRGfvL5CmtssyeRtiAAEi3UWf7RId7l8ez1PuiD/g+KOH0j9U2uFnuWfC+SQi4yN9TmekobsihJROt+L4P7+ZgGmODB5UBv7HjsATj02iyg9ZAU0/JRWOzJ14IwycHSdR7+DXwWwkckN7RIlMxavw4cy9s+6ARLQBgbWl/v6nraf820KPOvtKuP/AQ17M1w8MJ5PjrT+dvbdQh/4xqHmMbxXtrQHCcRrHp+IeKKLNiAAEi038oDfoJjnfb0U1KqoHyxIW35loECuiYBhKnP6hZWfqsJniyhOgpiO+RXRgYn7nHXS38S1AgpmnlPBXgeT1Y779EStBQsCHBOcm9QjOmZTf9xTdIBAYcHPaxsvPv0z2uFG9Hz74VhgiHF0MDnwRAorxvsekvNwJveH/P/8ZgxX4w/t9uRrGwnXRQRhJ32NQYdClH/wK34q4jV4N8IWPEbv2shjhiKJyhGp9Ypv4hl8Qy+LsdAooQJMns6H/GLY7TCxzQp3t9tIj5hGK7LWIAASMa8DF4NC6ti2HCmooWap8q3yzLCuH4ECuq0AwHAAQIjU3PDP2SA42iaFUkXMfVb6c8m7dK3GMd9/Gh/wJ/n8UKcTTmkMP3LOWN5fBB6TGl39TPlfQ16X7WS9Uw83tgPIXpNTjg1Q+V/Iaehw78xQeI00XQvytGhdhvfcVdktQEPzLGSVXLv2Exv8hMb/ITG/yExv8hMb/IVgbFxJ/8c0QlWPC50o8YHOAAAAAAAAAAAAAAAAAAADvvVUdt7TA1KDNhThDZcCvdqkw9FXO2rs70M7tp3uEZRlAuMoFxlAuMoFxlAuMoFxlAuMoFxlAt4OmkNexPxofmqsEB6CqemD20AAAAAZoAAAdgUAADDv9Lf60Edal1Pibbsk/Ix4GbgcboLMtK67ZnGcZxAfeBhY26UeYWNultc2KD86qadoUAAB5Re5OmJ4KAABVcYLNT94g+dYJPt5j0xXiAlYiXV+QaIMl7uejIaaQ17E/Gh+awznulyA2oMAW3hQAAA5goAACyeiFAAAw7/S3+tBHWpdT4m27JPyMeBm4HHSYDnwSgUAAB5Re5grxCgAAQAPLpQzrL4G1w2nGx66t28MMuP51QHlUGAHDhTOhlwBLUBD900x44QA/H2yOiK/HgVv0sL6LcXBky+EIcD67xTF9lXv0DidG3Fwx3vvP+o02VsjJGuOAqa2SrwFw0Cj5dKGdaoRnZp4w3mT6fle4e+PWrgDkoAiDW0mLmg7iwZ0XcW21o9mMZcahAAP4zzP2DGRgYlNYgASUAvuI58sg4wY5rAUJDvNcnB32BmsnRaMpQV/1/SGX4TqPFp8HphXjP29g7xsZ5mSQxwVCyInq2gVU/Xj92gSDNnOvn1RRf3txm5tsmKAj8hO2QTF84lICHnZ4jyeSAl9T9BxVTNJUCo41Pp0BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" alt="FORPRO - Réseau Formation Professionnelle PACA" />
+      </div>
+    </div>
+    
+    <!-- Titre de l'examen -->
+    <div class="exam-title-section">
+      <h1>Évaluation de Prévention Santé Environnement</h1>
+      <div class="subtitle">Prévention des risques professionnels – IFCA / PAC</div>
+      <div class="details">CAP / Formations PAC et MDC • Durée : 2h00 • Coefficient : 1</div>
+    </div>
+    
+    <!-- Cartouche d'identification -->
+    <div class="identity-cartouche">
+      <div class="cartouche-header">
+        📋 IDENTIFICATION DU CANDIDAT
+      </div>
+      <div class="cartouche-grid">
+        <div class="cartouche-field">
+          <label>Nom</label>
+          <input type="text" id="candidateNom" placeholder="NOM" />
+        </div>
+        <div class="cartouche-field">
+          <label>Prénom</label>
+          <input type="text" id="candidatePrenom" placeholder="Prénom" />
+        </div>
+        <div class="cartouche-field">
+          <label>Formation / Groupe</label>
+          <input type="text" id="candidateGroupe" placeholder="Ex: CAP IFCA 2025" />
+        </div>
+        <div class="cartouche-field">
+          <label>Date de l'examen</label>
+          <input type="date" id="candidateDate" />
+        </div>
+      </div>
+    </div>
+    
+    <!-- Corps du document -->
+    <div class="document-body">
+      <!-- Barre d'outils en haut (no-print) -->
+      <div class="no-print" style="position: sticky; top: 0; z-index: 1000; background: white; padding: 15px 40px; border-bottom: 2px solid var(--slate-light); box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: 0 -40px 30px -40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <div style="font-weight: 700; color: var(--gip-blue);">
+            🎓 Évaluation PSE IFCA/PAC - Version 2.0
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button onclick="printExam()" style="padding: 10px 20px; border: 2px solid var(--gip-blue); background: white; color: var(--gip-blue); border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; font-family: 'Marianne', sans-serif; transition: all 0.2s;">
+              🖨️ Imprimer
+            </button>
+            <button onclick="downloadPDF()" style="padding: 10px 20px; border: none; background: var(--gip-blue); color: white; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; font-family: 'Marianne', sans-serif; transition: all 0.2s;">
+              📄 Exporter PDF
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Consignes -->
+      <div class="instructions">
+        <h2>⚠️ Consignes importantes</h2>
+        <ul>
+          <li>Durée de l'épreuve : 2 heures</li>
+          <li>L'usage de la calculatrice non programmable est autorisé</li>
+          <li>Les documents personnels ne sont pas autorisés</li>
+          <li>Répondre directement sur le sujet en utilisant les espaces prévus</li>
+          <li>Soigner la présentation et l'orthographe</li>
+          <li>Toutes les réponses doivent être justifiées pour obtenir la totalité des points</li>
+          <li>Les situations professionnelles décrites s'appuient sur des cas réels de chantiers IFCA/PAC</li>
+        </ul>
+      </div>
+      
+      <div class="important-note">
+        <strong>⚠️ Attention</strong>
+        <p>Ce questionnaire porte sur l'ensemble des 5 journées de formation (35h). Les questions évaluent votre capacité à mobiliser les connaissances en situation professionnelle réelle. La précision du vocabulaire technique, la référence aux textes réglementaires et l'analyse des contextes professionnels sont des éléments d'appréciation essentiels.</p>
+      </div>
+      
+      <!-- PARTIE 1 : EVRP / DUERP -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Partie 1 : Évaluation des Risques Professionnels (EVRP / DUERP)</h2>
+          <div class="points">6 questions • 26 points</div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation professionnelle</div>
+            <div class="context-text">
+              Vous êtes technicien(ne) IFCA et vous intervenez dans un collège pour la rénovation complète du système de climatisation. Le chantier se déroule pendant les vacances scolaires. Vous devez remplacer 12 unités intérieures murales dans des salles de classe (étage), installer 2 groupes extérieurs en toiture-terrasse accessible par échelle fixe, et tirer les liaisons frigorifiques et les câbles électriques dans des faux-plafonds.
+              <br><br>
+              Le bâtiment date de 1975. Une entreprise de peinture intervient simultanément dans les couloirs. L'accès au chantier se fait par un escalier étroit avec du matériel à porter.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 1</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            En vous basant sur la situation décrite ci-dessus, réalisez une EVRP synthétique en suivant les 5 étapes de la méthode :
+            <br>1) Description de la situation
+            <br>2) Identification des dangers
+            <br>3) Évaluation du risque (avec justification)
+            <br>4) Mesures de prévention
+            <br>5) Preuves de mise en œuvre
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 2</span>
+            <span class="question-points">4 points</span>
+          </div>
+          <div class="question-text">
+            Qu'est-ce que le DUERP ? Citez l'article du Code du travail qui en fixe l'obligation et expliquez pourquoi ce document est indispensable sur un chantier IFCA/PAC. Qui est responsable de sa rédaction ?
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation professionnelle</div>
+            <div class="context-text">
+              Sur le chantier du collège, vous identifiez le risque de chute de hauteur lors de l'installation des groupes extérieurs en toiture (4 mètres de hauteur). Vous évaluez une gravité de 4 (blessures graves possibles) et une probabilité de 3 (intervention quotidienne en hauteur pendant 5 jours).
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 3</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            Complétez le tableau suivant en calculant le niveau de risque et en proposant des mesures de prévention selon la hiérarchie de prévention (supprimer, collectif, organisationnel, individuel/EPI). Justifiez vos choix.
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 15%;">Cotation (G×P)</th>
+                  <th style="width: 20%;">Niveau de risque</th>
+                  <th style="width: 35%;">Mesure N°1 (prioritaire)</th>
+                  <th style="width: 30%;">Mesure N°2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" style="text-align: center; font-weight: 700;">4 × 3 = ...</td>
+                  <td contenteditable="true"></td>
+                  <td contenteditable="true"></td>
+                  <td contenteditable="true"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="answer-area" style="margin-top: 15px;">
+            <strong style="font-size: 12px; color: var(--slate);">Justification de vos choix :</strong>
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation d'inspection</div>
+            <div class="context-text">
+              L'inspecteur du travail visite votre chantier et vous demande de prouver que vos mesures de prévention ont bien été mises en œuvre. Il vous indique : "Sans preuve, une mesure inscrite au DUERP n'a aucune valeur lors d'un contrôle ou en cas d'accident."
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 4</span>
+            <span class="question-points">4 points</span>
+          </div>
+          <div class="question-text">
+            Citez 5 types de preuves concrètes que vous pouvez fournir sur un chantier IFCA/PAC pour démontrer la mise en œuvre effective de vos mesures de prévention. Donnez un exemple précis pour chaque type de preuve.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation de coactivité</div>
+            <div class="context-text">
+              Sur le chantier du collège, l'entreprise de peinture ponce et prépare les murs des couloirs pendant que vous tirez vos câbles et liaisons frigorifiques dans les faux-plafonds au-dessus de ces mêmes couloirs. Les deux équipes utilisent le même escalier pour accéder aux étages et stocker temporairement leur matériel.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 5</span>
+            <span class="question-points">4 points</span>
+          </div>
+          <div class="question-text">
+            Qu'est-ce que la coactivité ? Identifiez 3 risques spécifiques liés à cette situation de coactivité et proposez une mesure de prévention concrète pour chaque risque.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 6</span>
+            <span class="question-points">4 points</span>
+          </div>
+          <div class="question-text">
+            Parmi les affirmations suivantes concernant la hiérarchie de prévention et l'EVRP, cochez les 3 affirmations VRAIES :
+          </div>
+          <div class="choices">
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Les EPI constituent toujours la première mesure de prévention à mettre en place car ils sont simples à utiliser</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Il faut d'abord supprimer ou réduire le risque à la source avant de recourir aux protections collectives puis aux EPI</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Une cotation G×P doit toujours être justifiée par l'exposition réelle, la fréquence et le niveau de maîtrise existant</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Une consigne écrite et affichée suffit à protéger efficacement les salariés sans autre mesure</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Le DUERP doit être mis à jour au minimum une fois par an et lors de toute décision d'aménagement important</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PARTIE 2 : COACTIVITÉ ET PLAN DE PRÉVENTION -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Partie 2 : Coactivité et Plan de Prévention</h2>
+          <div class="points">3 questions • 14 points</div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation professionnelle</div>
+            <div class="context-text">
+              Votre entreprise intervient dans un supermarché pour installer un nouveau système de climatisation dans la réserve frigorifique (chambre froide). En parallèle, une entreprise d'électricité réalise la mise aux normes du tableau électrique général et une entreprise de plomberie remplace le circuit d'eau. Les trois entreprises travaillent dans des espaces connexes pendant 3 semaines (420 heures cumulées d'intervention).
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 7</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            À partir de combien d'heures de travaux cumulés un plan de prévention écrit est-il obligatoire ? Ce seuil est-il atteint dans cette situation ? Citez 4 informations qui doivent obligatoirement figurer dans ce plan de prévention et expliquez leur utilité concrète.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation critique</div>
+            <div class="context-text">
+              Sur le chantier du supermarché, un incident survient : alors que vous percez un mur pour faire passer une liaison frigorifique, vous sectionnez accidentellement un câble électrique que l'électricien venait de tirer 30 minutes auparavant dans une gaine murale non signalée. Personne n'a été blessé mais le câble doit être remplacé et les travaux sont retardés d'une journée.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 8</span>
+            <span class="question-points">6 points</span>
+          </div>
+          <div class="question-text">
+            Analysez cet incident de coactivité :
+            <br>a) Identifiez les causes de cet incident (au moins 3 causes)
+            <br>b) Quelles mesures organisationnelles auraient pu éviter cet incident ?
+            <br>c) Proposez 3 mesures concrètes à mettre en place immédiatement pour éviter qu'un tel incident se reproduise
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 9</span>
+            <span class="question-points">3 points</span>
+          </div>
+          <div class="question-text">
+            Quels sont les 3 piliers essentiels pour gérer efficacement la coactivité sur un chantier ? (Cochez les 3 bonnes réponses)
+          </div>
+          <div class="choices">
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Coordination préalable et régulière entre les entreprises (réunions, points quotidiens)</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Balisage des zones de travail, signalisation des dangers et organisation des circulations</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Ignorer les autres corps de métier pour se concentrer sur son propre travail et avancer plus vite</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Information et communication continue entre les équipes sur les travaux en cours et à venir</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Intervention uniquement de nuit ou le week-end pour éviter de croiser les autres entreprises</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PARTIE 3 : DÉCHETS, CHIMIE, ÉLECTRICITÉ -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Partie 3 : Développement Durable, Déchets, Chimie et Électricité</h2>
+          <div class="points">5 questions • 22 points</div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation de chantier</div>
+            <div class="context-text">
+              À la fin du chantier du collège, vous devez gérer l'évacuation des déchets suivants : gravats de perçage béton (15 kg), chutes de câbles électriques cuivre (3 kg), emballages carton des unités (volume 2m³), bombes aérosols de mousse PU vides (6 unités), bidons d'huile frigorifique usagée (2L), chiffons souillés d'huile et de solvant, et fluide frigorigène R32 récupéré (8 kg).
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 10</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            Classez ces déchets dans le tableau selon les 3 catégories (DD = Déchets Dangereux, DND = Déchets Non Dangereux, Inertes). Pour chaque catégorie, indiquez la filière d'élimination appropriée et le document de traçabilité nécessaire.
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 33%;">DD (Déchets Dangereux)</th>
+                  <th style="width: 33%;">DND (Déchets Non Dangereux)</th>
+                  <th style="width: 33%;">Inertes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable="true" style="height: 100px; vertical-align: top; padding-top: 15px;"></td>
+                  <td contenteditable="true" style="height: 100px; vertical-align: top; padding-top: 15px;"></td>
+                  <td contenteditable="true" style="height: 100px; vertical-align: top; padding-top: 15px;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="answer-area" style="margin-top: 15px;">
+            <strong style="font-size: 12px; color: var(--slate);">Filières et documents de traçabilité :</strong>
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation professionnelle</div>
+            <div class="context-text">
+              Sur un nouveau chantier, vous devez utiliser un produit détergent pour nettoyer les circuits avant la mise en service. Votre chef d'équipe vous tend un bidon de 5L étiqueté "DETERG PRO" avec les pictogrammes suivants : un point d'exclamation dans un losange rouge, et une flamme dans un losange rouge. Il n'y a pas de FDS disponible sur le chantier.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 11</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            a) Qu'est-ce qu'une FDS (Fiche de Données de Sécurité) ? Citez le règlement européen qui impose la FDS.
+            <br>b) Les pictogrammes présents indiquent quels dangers ?
+            <br>c) Citez 4 informations décisionnelles essentielles que vous devez trouver dans la FDS avant d'utiliser ce produit.
+            <br>d) Que devez-vous faire dans cette situation où la FDS n'est pas disponible ?
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 12</span>
+            <span class="question-points">4 points</span>
+          </div>
+          <div class="question-text">
+            Expliquez pourquoi la traçabilité des déchets est obligatoire et essentielle sur un chantier IFCA/PAC. Citez 3 documents ou preuves qui assurent cette traçabilité du chantier jusqu'à l'élimination finale.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation professionnelle</div>
+            <div class="context-text">
+              Dans un local technique, vous devez intervenir sur un tableau électrique pour connecter l'alimentation d'un groupe extérieur. Le tableau est sous tension. Vous disposez d'une habilitation électrique B1V. Votre collègue, titulaire de l'habilitation BR, peut réaliser la consignation.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 13</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            Concernant le risque électrique en situation IFCA/PAC, répondez aux questions suivantes :
+            <br>a) Pouvez-vous intervenir seul sur ce tableau sous tension avec votre habilitation B1V ? Justifiez.
+            <br>b) Citez l'article du Code du travail qui encadre les habilitations électriques.
+            <br>c) Quelles sont les 3 étapes obligatoires avant de commencer vos travaux sur ce tableau ?
+            <br>d) Citez 2 EPI spécifiques obligatoires pour cette intervention.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 14</span>
+            <span class="question-points">3 points</span>
+          </div>
+          <div class="question-text">
+            Concernant la prévention du risque chimique et électrique, cochez les 3 affirmations VRAIES :
+          </div>
+          <div class="choices">
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Un produit sans pictogramme de danger sur l'étiquette est forcément sans risque et peut être utilisé sans précaution</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">La FDS est obligatoire pour tous les produits chimiques dangereux selon le règlement REACH (CE) n°1907/2006</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Les gants isolants électriques doivent être vérifiés visuellement avant chaque utilisation et contrôlés périodiquement</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Je peux réparer un câble électrique endommagé avec du ruban isolant sans autre vérification ni signalement</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Les fluides frigorigènes (R32, R410A, etc.) sont des substances réglementées nécessitant une récupération et traçabilité obligatoires</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PARTIE 4 : AMIANTE -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Partie 4 : Amiante – Information et Conduite à Tenir</h2>
+          <div class="points">4 questions • 18 points</div>
+        </div>
+        
+        <div class="important-note">
+          <strong>⚠️ Important</strong>
+          <p>Cette formation délivre une information/sensibilisation à l'amiante. Elle ne constitue pas une formation SS4 certifiante permettant de travailler sur des matériaux amiantés. Les questions portent sur la conduite à tenir en cas de découverte fortuite et les acteurs à solliciter.</p>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation critique</div>
+            <div class="context-text">
+              Vous intervenez dans un immeuble d'habitation construit en 1972 pour installer une climatisation réversible. En perçant le mur extérieur pour faire passer la liaison frigorifique, vous découvrez un isolant fibreux grisâtre dans la paroi. Le matériau ressemble à du flocage d'amiante. Des poussières se sont dégagées lors du perçage. Vous êtes seul sur le chantier, votre collègue est parti chercher du matériel.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 15</span>
+            <span class="question-points">6 points</span>
+          </div>
+          <div class="question-text">
+            Face à cette situation de suspicion d'amiante, décrivez précisément et dans l'ordre les 5 étapes de la conduite à tenir (STOP → Sécuriser → Alerter → Tracer → Décider). Pour chaque étape, détaillez les actions concrètes que vous devez réaliser immédiatement.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 16</span>
+            <span class="question-points">4 points</span>
+          </div>
+          <div class="question-text">
+            a) Quelle est la différence fondamentale entre une formation SS3 et une formation SS4 concernant l'amiante ?
+            <br>b) Avec la formation d'information que vous venez de suivre, êtes-vous autorisé à intervenir sur des matériaux contenant de l'amiante ? Justifiez.
+            <br>c) Qui est habilité à poursuivre les travaux après la découverte d'amiante ?
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 17</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            Citez 5 matériaux, équipements ou situations dans lesquels vous pouvez potentiellement rencontrer de l'amiante sur un chantier de rénovation IFCA/PAC dans un bâtiment construit avant 1997. Précisez pour chacun la localisation typique.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 18</span>
+            <span class="question-points">3 points</span>
+          </div>
+          <div class="question-text">
+            Parmi les affirmations suivantes sur l'amiante, cochez les 3 affirmations VRAIES :
+          </div>
+          <div class="choices">
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Face à un matériau suspect, je peux continuer mon intervention si je mets un masque FFP2, car cela me protège suffisamment</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">La priorité absolue est d'arrêter immédiatement toute action génératrice de poussière dès qu'un doute existe</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">La traçabilité précise (localisation, date, description, photos) est essentielle pour permettre une reprise encadrée des travaux</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">L'amiante ne présente un danger que si le matériau est en très mauvais état et friable</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Seules les entreprises certifiées SS4 avec personnel formé et moyens adaptés peuvent intervenir sur des matériaux amiantés</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PARTIE 5 : TMS -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Partie 5 : Troubles Musculo-Squelettiques (TMS)</h2>
+          <div class="points">3 questions • 15 points</div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Situation professionnelle</div>
+            <div class="context-text">
+              Vous travaillez depuis 3 ans comme technicien IFCA. Depuis quelques mois, vous ressentez des douleurs régulières : cervicales tendues en fin de journée, douleurs à l'épaule droite (vous êtes droitier), et lombaires après le port de charges. Ces douleurs apparaissent surtout après des journées d'installation d'unités intérieures en hauteur ou après avoir monté plusieurs groupes extérieurs dans des escaliers.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 19</span>
+            <span class="question-points">5 points</span>
+          </div>
+          <div class="question-text">
+            a) Qu'est-ce qu'un TMS (Trouble Musculo-Squelettique) ?
+            <br>b) À partir de la situation décrite, identifiez 5 facteurs de risque TMS spécifiques aux métiers IFCA/PAC qui expliquent vos douleurs.
+            <br>c) Quel(s) impact(s) ont les TMS sur votre travail, votre santé et votre entreprise ?
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 Mission professionnelle</div>
+            <div class="context-text">
+              Votre chef d'entreprise vous demande de participer à l'élaboration d'un plan d'actions TMS pour réduire les risques dans votre activité. Il souhaite des propositions concrètes et applicables rapidement, avec des actions techniques, organisationnelles et comportementales.
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 20</span>
+            <span class="question-points">7 points</span>
+          </div>
+          <div class="question-text">
+            Construisez un plan d'actions TMS complet en proposant :
+            <br>• 3 actions techniques (équipements, matériel, aménagement des postes)
+            <br>• 3 actions organisationnelles (planning, méthodes de travail, répartition des tâches)
+            <br>• 2 micro-gestes ou bonnes pratiques individuelles à adopter au quotidien
+            <br>• 2 indicateurs de suivi pour mesurer l'efficacité du plan d'actions
+            <br><br>
+            Pour chaque action, précisez son objectif concret.
+          </div>
+          <div class="answer-area">
+            <div class="answer-lines">
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+              <div class="answer-line" contenteditable="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">Question 21</span>
+            <span class="question-points">3 points</span>
+          </div>
+          <div class="question-text">
+            Parmi les situations suivantes, cochez les 3 qui représentent des facteurs de TMS majeurs en IFCA/PAC :
+          </div>
+          <div class="choices">
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Travail prolongé les bras au-dessus des épaules pour la pose d'unités intérieures murales ou le tirage de câbles en hauteur</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Utilisation quotidienne d'un smartphone pendant les pauses pour consulter les plans sur une application</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Port répété de groupes extérieurs lourds (30-50 kg) dans les escaliers sans aide mécanique ni binôme</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Travail dans des espaces contraints (combles, vides sanitaires, faux-plafonds) imposant des postures accroupies ou bras tendus</div>
+            </label>
+            <label class="choice">
+              <div class="choice-box"></div>
+              <div class="choice-text">Conduite d'un véhicule utilitaire léger sur autoroute pour se rendre sur les chantiers</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PARTIE 6 : CAS PRATIQUE TRANSVERSAL -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Partie 6 : Cas Pratique Transversal (Évaluation Sommative Finale)</h2>
+          <div class="points">1 situation professionnelle complexe • 15 points</div>
+        </div>
+        
+        <div class="important-note">
+          <strong>⚠️ Mise en situation professionnelle réelle</strong>
+          <p>Cette question finale évalue votre capacité à mobiliser l'ensemble des connaissances acquises durant les 5 jours de formation (EVRP/DUERP, coactivité, déchets, chimie, électricité, amiante, TMS) dans une situation complexe d'intervention. C'est l'évaluation sommative qui valide vos compétences opérationnelles.</p>
+        </div>
+        
+        <div class="question">
+          <div class="context-box">
+            <div class="context-label">📍 SITUATION PROFESSIONNELLE COMPLÈTE</div>
+            <div class="context-text">
+              <strong>Contexte :</strong> Votre entreprise CLIMATEC remporte un marché pour la rénovation complète du système de climatisation d'un centre médical construit en 1978. Le chantier se déroule en site occupé (cabinet médical en activité). Vous êtes chef d'équipe de 2 techniciens.
+              <br><br>
+              <strong>Travaux à réaliser :</strong>
+              <br>• Dépose de 8 anciennes unités intérieures (fluide R22, non récupérable) et de 2 anciens groupes extérieurs (toiture accessible par échelle fixe, hauteur 6m)
+              <br>• Installation de 8 nouvelles unités DRV (multisplit R32) dans les salles de consultation et bureaux
+              <br>• Installation de 2 nouveaux groupes extérieurs en toiture
+              <br>• Perçage de traversées murales (murs porteurs en béton de 30 cm)
+              <br>• Tirage de nouvelles liaisons frigorifiques et câbles d'alimentation dans les faux-plafonds et gaines techniques
+              <br>• Mise en service et tests
+              <br><br>
+              <strong>Contraintes identifiées :</strong>
+              <br>• Bâtiment de 1978 : risque amiante dans les isolants, colles et joints
+              <br>• Travaux électriques à réaliser sur tableau général en présence de tension (consignation impossible car site occupé)
+              <br>• Coactivité : une entreprise de peinture rafraîchit les murs des salles d'attente en même temps
+              <br>• Planning serré : 3 semaines (durée 400h cumulées de présence)
+              <br>• Accès difficile : escaliers étroits, pas d'ascenseur, stockage limité
+              <br>• Produits à utiliser : détergent pour nettoyage circuits (inflammable), huile frigorifique, fluide R32
+              <br>• Port de charges lourdes répété (groupes extérieurs 45 kg chacun)
+            </div>
+          </div>
+          
+          <div class="question-header">
+            <span class="question-number">Question 22 – CAS PRATIQUE TRANSVERSAL</span>
+            <span class="question-points">15 points</span>
+          </div>
+          
+          <div class="question-text" style="margin-top: 20px;">
+            <strong>TRAVAIL DEMANDÉ :</strong> En tant que chef d'équipe, vous devez préparer ce chantier en intégrant toutes les dimensions de prévention. Répondez de manière structurée et précise aux 5 parties suivantes :
+          </div>
+          
+          <div style="margin-top: 25px;">
+            <div style="background: #f0f9ff; padding: 20px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid var(--gip-blue);">
+              <strong style="color: var(--gip-blue); font-size: 14px;">A. ÉVALUATION DES RISQUES – EVRP (4 points)</strong>
+              <div style="margin-top: 10px; font-size: 13px;">
+                Identifiez et évaluez 4 risques majeurs présents dans cette situation.
+                <br>Pour chaque risque : nommez-le, évaluez-le (G×P avec justification), et proposez une mesure de prévention prioritaire selon la hiérarchie de prévention.
+              </div>
+              <div class="answer-lines" style="margin-top: 15px;">
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+              </div>
+            </div>
+            
+            <div style="background: #f0f9ff; padding: 20px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid var(--gip-blue);">
+              <strong style="color: var(--gip-blue); font-size: 14px;">B. COACTIVITÉ ET ORGANISATION (3 points)</strong>
+              <div style="margin-top: 10px; font-size: 13px;">
+                Un plan de prévention écrit est-il obligatoire ? Justifiez par le calcul.
+                <br>Proposez 3 mesures organisationnelles concrètes pour gérer la coactivité avec l'entreprise de peinture et assurer la sécurité du personnel médical et des patients.
+              </div>
+              <div class="answer-lines" style="margin-top: 15px;">
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+              </div>
+            </div>
+            
+            <div style="background: #f0f9ff; padding: 20px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid var(--gip-blue);">
+              <strong style="color: var(--gip-blue); font-size: 14px;">C. GESTION DES DÉCHETS ET PRODUITS CHIMIQUES (3 points)</strong>
+              <div style="margin-top: 10px; font-size: 13px;">
+                Listez les déchets à évacuer avec leur catégorie (DD/DND/Inerte), leur filière d'élimination et le document de traçabilité nécessaire.
+                <br>Pour le détergent inflammable : quelles précautions de stockage et d'utilisation ? Quel document obligatoire devez-vous consulter ?
+              </div>
+              <div class="answer-lines" style="margin-top: 15px;">
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+              </div>
+            </div>
+            
+            <div style="background: #f0f9ff; padding: 20px; border-radius: 6px; margin-bottom: 20px; border-left: 4px solid var(--gip-blue);">
+              <strong style="color: var(--gip-blue); font-size: 14px;">D. CONDUITE À TENIR FACE À L'AMIANTE (3 points)</strong>
+              <div style="margin-top: 10px; font-size: 13px;">
+                Lors du perçage d'une traversée murale, vous découvrez un isolant fibreux suspect derrière le mur.
+                <br>Décrivez précisément votre conduite à tenir (5 étapes STOP/Sécuriser/Alerter/Tracer/Décider) et les personnes à contacter immédiatement.
+              </div>
+              <div class="answer-lines" style="margin-top: 15px;">
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+              </div>
+            </div>
+            
+            <div style="background: #f0f9ff; padding: 20px; border-radius: 6px; border-left: 4px solid var(--gip-blue);">
+              <strong style="color: var(--gip-blue); font-size: 14px;">E. PRÉVENTION DES TMS (2 points)</strong>
+              <div style="margin-top: 10px; font-size: 13px;">
+                Identifiez 3 situations à fort risque TMS sur ce chantier et proposez pour chacune une solution technique ou organisationnelle concrète pour réduire ce risque.
+              </div>
+              <div class="answer-lines" style="margin-top: 15px;">
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+                <div class="answer-line" contenteditable="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Section signature -->
+      <div class="signature-section">
+        <h3 style="font-size: 16px; font-weight: 800; text-align: center; margin-bottom: 25px; color: var(--gip-blue); text-transform: uppercase;">
+          Validation et Signature
+        </h3>
+        
+        <div class="signature-grid">
+          <div class="signature-info">
+            <div style="background: white; padding: 20px; border-radius: 6px; border: 1px solid var(--slate-light);">
+              <h4 style="font-size: 13px; font-weight: 800; color: var(--slate-dark); margin-bottom: 15px; text-transform: uppercase;">Informations du candidat</h4>
+              <div class="signature-field">
+                <label>Nom et Prénom</label>
+                <div class="value" id="sigNomPrenom">-</div>
+              </div>
+              <div class="signature-field">
+                <label>Formation</label>
+                <div class="value" id="sigGroupe">-</div>
+              </div>
+              <div class="signature-field">
+                <label>Date</label>
+                <div class="value" id="sigDate">-</div>
+              </div>
+            </div>
+            <div style="background: #fffbeb; padding: 15px; border-radius: 6px; border: 1px solid #fbbf24; margin-top: 15px;">
+              <p style="font-size: 12px; color: var(--slate-dark); font-weight: 500; margin: 0;">
+                <strong>📝 Engagement :</strong> Je certifie avoir répondu de manière personnelle à ce questionnaire et avoir pris connaissance des consignes.
+              </p>
+            </div>
+          </div>
+          
+          <div class="signature-box-container">
+            <label>Signature du candidat</label>
+            <div class="signature-canvas-wrapper">
+              <canvas id="signatureCanvas" width="350" height="150"></canvas>
+            </div>
+            <div class="signature-buttons">
+              <button type="button" class="clear" onclick="clearSignature()">🗑️ Effacer</button>
+              <button type="button" onclick="document.getElementById('signatureCanvas').toDataURL()">💾 Valider</button>
+            </div>
+            <p style="font-size: 11px; color: var(--slate); text-align: center; margin-top: 10px;">
+              Signez avec votre souris, trackpad ou doigt (mobile/tablette)
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Section soumission par email -->
+      <div class="submit-section">
+        <h3>📧 Envoi des résultats au formateur</h3>
+        <p style="font-size: 13px; margin-bottom: 15px; color: var(--slate-dark); font-weight: 500;">
+          Une fois l'évaluation terminée et signée, cliquez sur le bouton ci-dessous pour envoyer vos réponses par email.
+        </p>
+        <button class="email-button" onclick="sendExam()">
+          Envoyer l'évaluation par email
+        </button>
+        <p class="submit-info">
+          Destinataire : <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d3d4dfded8c59fd5d4d7ddd0dfd5c3d4f1d0d29cdfd8d2d49fd7c3">[email&#160;protected]</a></strong><br>
+          Format : Les réponses seront envoyées au format texte dans le corps du mail avec la signature
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <strong>GRETA du Var / GIP FIPAN - Académie de Nice</strong>
+      Formation IFCA / PAC - 5 jours (35h) | Réseau FORPRO PACA
+      <div style="margin-top: 10px; font-size: 10px;">
+        <strong>BARÈME TOTAL : 110 POINTS</strong><br>
+        Partie 1 (EVRP) : 26 pts • Partie 2 (Coactivité) : 14 pts • Partie 3 (Déchets/Chimie/Élec) : 22 pts<br>
+        Partie 4 (Amiante) : 18 pts • Partie 5 (TMS) : 15 pts • Partie 6 (Cas pratique) : 15 pts
+      </div>
+    </div>
+  </div>
+  
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Mise à jour automatique des infos dans la signature
+    function updateSignatureInfo() {
+      const nom = document.getElementById('candidateNom').value || '-';
+      const prenom = document.getElementById('candidatePrenom').value || '-';
+      const groupe = document.getElementById('candidateGroupe').value || '-';
+      const date = document.getElementById('candidateDate').value || '-';
+      
+      document.getElementById('sigNomPrenom').textContent = `${nom} ${prenom}`;
+      document.getElementById('sigGroupe').textContent = groupe;
+      document.getElementById('sigDate').textContent = date;
+    }
+    
+    document.getElementById('candidateNom').addEventListener('input', updateSignatureInfo);
+    document.getElementById('candidatePrenom').addEventListener('input', updateSignatureInfo);
+    document.getElementById('candidateGroupe').addEventListener('input', updateSignatureInfo);
+    document.getElementById('candidateDate').addEventListener('change', updateSignatureInfo);
+    
+    // Gestion de la signature tactile
+    const canvas = document.getElementById('signatureCanvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    
+    // Configuration du style de dessin
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    
+    function startDrawing(e) {
+      isDrawing = true;
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      
+      if (e.type.includes('touch')) {
+        lastX = (e.touches[0].clientX - rect.left) * scaleX;
+        lastY = (e.touches[0].clientY - rect.top) * scaleY;
+      } else {
+        lastX = (e.clientX - rect.left) * scaleX;
+        lastY = (e.clientY - rect.top) * scaleY;
+      }
+    }
+    
+    function draw(e) {
+      if (!isDrawing) return;
+      e.preventDefault();
+      
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      
+      let currentX, currentY;
+      if (e.type.includes('touch')) {
+        currentX = (e.touches[0].clientX - rect.left) * scaleX;
+        currentY = (e.touches[0].clientY - rect.top) * scaleY;
+      } else {
+        currentX = (e.clientX - rect.left) * scaleX;
+        currentY = (e.clientY - rect.top) * scaleY;
+      }
+      
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(currentX, currentY);
+      ctx.stroke();
+      
+      lastX = currentX;
+      lastY = currentY;
+    }
+    
+    function stopDrawing() {
+      isDrawing = false;
+    }
+    
+    // Events souris
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+    
+    // Events tactiles
+    canvas.addEventListener('touchstart', startDrawing);
+    canvas.addEventListener('touchmove', draw);
+    canvas.addEventListener('touchend', stopDrawing);
+    
+    function clearSignature() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    // Gestion des cases à cocher
+    document.addEventListener('DOMContentLoaded', function() {
+      const choiceBoxes = document.querySelectorAll('.choice');
+      choiceBoxes.forEach(choice => {
+        choice.addEventListener('click', function() {
+          const box = this.querySelector('.choice-box');
+          box.classList.toggle('checked');
+        });
+      });
+    });
+    
+    // Fonction d'envoi par email
+    function sendExam() {
+      const nom = document.getElementById('candidateNom').value || '(Non renseigné)';
+      const prenom = document.getElementById('candidatePrenom').value || '(Non renseigné)';
+      const groupe = document.getElementById('candidateGroupe').value || '(Non renseigné)';
+      const date = document.getElementById('candidateDate').value || '(Non renseigné)';
+      
+      let candidateInfo = 'ÉVALUATION PSE IFCA/PAC - GRETA du Var / GIP FIPAN\n';
+      candidateInfo += '================================================\n\n';
+      candidateInfo += `Nom: ${nom}\n`;
+      candidateInfo += `Prénom: ${prenom}\n`;
+      candidateInfo += `Formation/Groupe: ${groupe}\n`;
+      candidateInfo += `Date: ${date}\n\n`;
+      
+      let allAnswers = '\nRÉPONSES DU CANDIDAT\n';
+      allAnswers += '================================================\n\n';
+      
+      const questions = document.querySelectorAll('.question');
+      questions.forEach((question) => {
+        const questionNumber = question.querySelector('.question-number')?.textContent || '';
+        const questionText = question.querySelector('.question-text')?.textContent.trim() || '';
+        const questionPoints = question.querySelector('.question-points')?.textContent || '';
+        
+        allAnswers += `\n${questionNumber} (${questionPoints})\n`;
+        allAnswers += `${questionText}\n`;
+        allAnswers += '─'.repeat(80) + '\n';
+        
+        // Context box
+        const contextBox = question.querySelector('.context-box .context-text');
+        if (contextBox) {
+          allAnswers += `CONTEXTE: ${contextBox.textContent.trim()}\n\n`;
+        }
+        
+        // Réponses écrites
+        const answerLines = question.querySelectorAll('.answer-line');
+        if (answerLines.length > 0) {
+          allAnswers += 'RÉPONSE:\n';
+          answerLines.forEach(line => {
+            const text = line.textContent.trim();
+            if (text) allAnswers += text + '\n';
+          });
+        }
+        
+        // Choix cochés
+        const choices = question.querySelectorAll('.choice');
+        if (choices.length > 0) {
+          allAnswers += '\nCHOIX SÉLECTIONNÉS:\n';
+          choices.forEach((choice) => {
+            const checkbox = choice.querySelector('.choice-box');
+            if (checkbox.classList.contains('checked')) {
+              allAnswers += `☑ ${choice.querySelector('.choice-text').textContent}\n`;
+            }
+          });
+        }
+        
+        // Tableaux
+        const tableCells = question.querySelectorAll('table tbody td[contenteditable]');
+        if (tableCells.length > 0) {
+          allAnswers += '\nTABLEAU COMPLÉTÉ:\n';
+          tableCells.forEach((cell, i) => {
+            const text = cell.textContent.trim();
+            if (text) {
+              allAnswers += `${text} | `;
+            }
+          });
+          allAnswers += '\n';
+        }
+        
+        allAnswers += '\n';
+      });
+      
+      // Signature
+      const signatureData = canvas.toDataURL();
+      allAnswers += '\n\nSIGNATURE: (image base64 disponible dans le canvas)\n';
+      
+      const subject = encodeURIComponent(`Évaluation PSE IFCA/PAC - ${nom} ${prenom}`);
+            const body = encodeURIComponent(candidateInfo + allAnswers);
+      const mailtoLink = `mailto:benoit.deflandre@ac-nice.fr?subject=${subject}&body=${body}`;
+      
+      // Demander confirmation
+      const confirmed = confirm(
+        '📧 Envoi de l\'évaluation\n\n' +
+        'Destinataire : benoit.deflandre@ac-nice.fr\n' +
+        'Candidat : ' + nom + ' ' + prenom + '\n\n' +
+        'L\'envoi va ouvrir votre client mail.\n' +
+        'Si cela ne fonctionne pas, utilisez les options alternatives ci-dessous.\n\n' +
+        'Continuer ?'
+      );
+      
+      if (confirmed) {
+        window.location.href = mailtoLink;
+        setTimeout(() => showAlternativeModal(candidateInfo + allAnswers), 2000);
+      }
+    }
+    
+    // Afficher modal d'options alternatives
+    function showAlternativeModal(content) {
+      const modal = document.getElementById('alternativeModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        document.getElementById('emailContent').value = content;
+      }
+    }
+    
+    // Copier dans le presse-papiers
+    function copyToClipboard() {
+      const content = document.getElementById('emailContent');
+      content.select();
+      document.execCommand('copy');
+      alert('✅ Contenu copié !\n\nOuvrez votre messagerie et collez (Ctrl+V) dans un nouveau message à benoit.deflandre@ac-nice.fr');
+    }
+    
+    // Ouvrir Gmail
+    function openGmail() {
+      const nom = document.getElementById('candidateNom').value || '';
+      const prenom = document.getElementById('candidatePrenom').value || '';
+      const content = document.getElementById('emailContent').value;
+      const subject = 'Évaluation PSE IFCA/PAC - ' + nom + ' ' + prenom;
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=benoit.deflandre@ac-nice.fr&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
+      window.open(gmailUrl, '_blank');
+    }
+    
+    // Ouvrir Outlook.com
+    function openOutlook() {
+      const nom = document.getElementById('candidateNom').value || '';
+      const prenom = document.getElementById('candidatePrenom').value || '';
+      const content = document.getElementById('emailContent').value;
+      const subject = 'Évaluation PSE IFCA/PAC - ' + nom + ' ' + prenom;
+      const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=benoit.deflandre@ac-nice.fr&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(content)}`;
+      window.open(outlookUrl, '_blank');
+    }
+    
+    // Fermer modal
+    function closeModal() {
+      document.getElementById('alternativeModal').style.display = 'none';
+    }
+    
+    // Fonction d'impression
+    function printExam() {
+      window.print();
+    }
+    
+    // Télécharger en PDF
+    function downloadPDF() {
+      alert('📄 Génération du PDF\n\n1. La fenêtre d\'impression va s\'ouvrir\n2. Sélectionnez "Enregistrer au format PDF" ou "Microsoft Print to PDF"\n3. Choisissez le nom et l\'emplacement\n4. Cliquez sur "Enregistrer"\n\n✅ La signature sera incluse');
+      window.print();
+    }
+  </script>
+  
+  <!-- Modal alternatives d'envoi -->
+  <div id="alternativeModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 10000; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: white; padding: 30px; border-radius: 12px; max-width: 600px; width: 100%; max-height: 90vh; overflow-y: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="font-size: 18px; font-weight: 800; color: var(--slate-dark); margin: 0;">📧 Options d'envoi alternatives</h3>
+        <button onclick="closeModal()" style="border: none; background: none; font-size: 24px; cursor: pointer; color: var(--slate);">×</button>
+      </div>
+      
+      <p style="font-size: 14px; color: var(--slate); margin-bottom: 20px;">
+        Si le client mail ne s'est pas ouvert, choisissez une option ci-dessous :
+      </p>
+      
+      <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;">
+        <button onclick="openGmail()" style="padding: 12px 20px; border: 2px solid #ea4335; background: white; color: #ea4335; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; font-family: 'Marianne', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
+          <span style="font-size: 20px;">📧</span> Ouvrir Gmail
+        </button>
+        
+        <button onclick="openOutlook()" style="padding: 12px 20px; border: 2px solid #0078d4; background: white; color: #0078d4; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; font-family: 'Marianne', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
+          <span style="font-size: 20px;">📨</span> Ouvrir Outlook.com
+        </button>
+        
+        <button onclick="copyToClipboard()" style="padding: 12px 20px; border: 2px solid var(--gip-blue); background: white; color: var(--gip-blue); border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px; font-family: 'Marianne', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;">
+          <span style="font-size: 20px;">📋</span> Copier le contenu
+        </button>
+      </div>
+      
+      <div style="background: var(--bg-light); padding: 15px; border-radius: 6px; border: 1px solid var(--slate-light);">
+        <label style="font-size: 12px; font-weight: 700; color: var(--slate); text-transform: uppercase; display: block; margin-bottom: 10px;">
+          Aperçu du contenu à envoyer :
+        </label>
+        <textarea id="emailContent" readonly style="width: 100%; height: 200px; padding: 10px; border: 1px solid var(--slate-light); border-radius: 4px; font-family: monospace; font-size: 11px; resize: vertical;"></textarea>
+      </div>
+      
+      <div style="margin-top: 15px; padding: 12px; background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 4px;">
+        <p style="font-size: 12px; color: var(--slate-dark); margin: 0;">
+          <strong>📧 Destinataire:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7d5d2d9d8dec399d3d2d1dbd6d9d3c5d2f7d6d49ad9ded4d299d1c5">[email&#160;protected]</a><br>
+          <strong>💡 Conseil:</strong> V�
